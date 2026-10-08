@@ -1533,6 +1533,234 @@ header.site-header {
 }
 
 
+/* -------------------------------------------------------------------------
+   Interactive Teaser Card & Modal Comparator Dual Selectors
+   ------------------------------------------------------------------------- */
+.card-teaser-slider-box {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #000;
+  border-radius: 12px 12px 0 0;
+  cursor: ew-resize;
+  user-select: none;
+}
+
+.teaser-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.teaser-layer-before {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.teaser-layer-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: inset(0 0 0 var(--teaser-pos, 50%));
+}
+
+.teaser-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.teaser-pill-badge {
+  position: absolute;
+  top: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.teaser-pill-badge.pill-left {
+  left: 12px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.teaser-pill-badge.pill-right {
+  right: 12px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #86efac;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.teaser-divider-needle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--teaser-pos, 50%);
+  width: 2.5px;
+  background: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px var(--crimson);
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.teaser-needle-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(16, 18, 27, 0.95);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.teaser-range-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 15;
+}
+
+.teaser-hint-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+  z-index: 5;
+  letter-spacing: 0.08em;
+}
+
+/* Modal Comparator Dual Selectors */
+.modal-comparator-box {
+  background: rgba(14, 16, 24, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 30px;
+}
+
+.dual-selector-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  background: rgba(20, 24, 36, 0.75);
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.selector-col {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.selector-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dot-ind {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-ind.red {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+}
+
+.dot-ind.green {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.custom-select-finish {
+  background: rgba(10, 12, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.custom-select-finish:focus {
+  border-color: var(--crimson);
+}
+
+.selector-vs-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--wine-light);
+  background: rgba(184, 29, 91, 0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--wine);
+}
+
+.square-tag-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--wine-light);
+  background: rgba(184, 29, 91, 0.15);
+  border: 1px solid var(--wine);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+
     </style>
 </head>
 <body>
@@ -1550,8 +1778,7 @@ header.site-header {
 
         <nav class="nav-links">
             <a href="#works" class="nav-link">Selected Works</a>
-            <a href="#material-lab" class="nav-link">3D Material Lab</a>
-            <a href="#about" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
             <a href="#archive" class="nav-link">Archive</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -1604,32 +1831,61 @@ header.site-header {
 
         <div class="works-grid-2col">
             
-        <article class="project-card" onclick="openCaseStudy('futuraim_3d')">
-            <div class="project-thumb-box">
-                <img class="project-thumb-img" src="https://img.youtube.com/vi/6D6Zw7GCORE/hqdefault.jpg" alt="FuturaIM — 3D Material Embellishments & E-Commerce UX" loading="lazy">
-                <div class="project-thumb-overlay">
-                    <div class="play-circle-btn">
-                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <!-- Project 1 (Flagship Interactive Teaser Card with Needle Slider): FuturaIM -->
+            <article class="project-card project-card-interactive" id="cardFuturaIM">
+                <div class="project-thumb-box card-teaser-slider-box" id="teaserSliderBox" style="--teaser-pos: 50%;">
+                    <!-- Layer 1: Sem Enobrecimento -->
+                    <div class="teaser-layer teaser-layer-before">
+                        <video class="teaser-video" autoplay loop muted playsinline preload="auto" id="teaserVidBefore">
+                            <source src="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" type="video/mp4">
+                        </video>
+                        <span class="teaser-pill-badge pill-left">SEM ACABAMENTO</span>
+                    </div>
+
+                    <!-- Layer 2: Verniz Localizado Frente -->
+                    <div class="teaser-layer teaser-layer-after" id="teaserLayerAfter">
+                        <video class="teaser-video" autoplay loop muted playsinline preload="auto" id="teaserVidAfter">
+                            <source src="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4" type="video/mp4">
+                        </video>
+                        <span class="teaser-pill-badge pill-right">VERNIZ LOCALIZADO</span>
+                    </div>
+
+                    <!-- Comparison Needle Handle -->
+                    <div class="teaser-divider-needle" id="teaserDividerNeedle">
+                        <div class="teaser-needle-knob" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Needle Drag Range -->
+                    <input type="range" min="0" max="100" value="50" class="teaser-range-input" aria-label="Arraste para comparar acabamento" oninput="onTeaserMove(this.value)">
+                    
+                    <div class="teaser-hint-badge">
+                        <span>◂ ARRASTE PARA COMPARAR ▸</span>
                     </div>
                 </div>
-                <div class="thumb-tag-badge">3D & E-COMMERCE UX</div>
-                <div class="thumb-duration-badge">0:45</div>
-            </div>
-            <div class="project-info-body">
-                <div>
-                    <div class="project-client-name">FuturaIM • 2026</div>
-                    <h3 class="project-card-title">FuturaIM — 3D Material Embellishments & E-Commerce UX</h3>
-                    <p class="project-card-excerpt">Photorealistic 3D material simulations solving tactile visualization barriers on e-commerce product pages.</p>
-                </div>
-                <div class="project-meta-row">
-                    <div class="tools-pill-group">
-                        <span class="tool-tag">Blender</span><span class="tool-tag">Cycles / Eevee</span><span class="tool-tag">After Effects</span><span class="tool-tag">Photoshop</span>
+
+                <div class="project-info-body" onclick="openCaseStudy('futuraim_3d')">
+                    <div>
+                        <div class="project-client-name">FuturaIM • 2026</div>
+                        <h3 class="project-card-title">FuturaIM — 3D Material Embellishments &amp; E-Commerce UX</h3>
+                        <p class="project-card-excerpt">
+                            Simulações 3D hiper-realistas para e-commerce gráfico. Arraste a agulha acima para testar e clique para abrir o laboratório completo com comparação entre acabamentos.
+                        </p>
                     </div>
-                    <span class="view-case-link">View Case Study &rarr;</span>
+                    <div class="project-meta-row">
+                        <div class="tools-pill-group">
+                            <span class="tool-tag">Blender 3D</span>
+                            <span class="tool-tag">Cycles PBR</span>
+                            <span class="tool-tag">E-Commerce UX</span>
+                        </div>
+                        <span class="view-case-link">Abrir Laboratório Completo &rarr;</span>
+                    </div>
                 </div>
-            </div>
-        </article>
-        
+            </article>
+
+            <!-- Other Projects in Selected Works -->
+            
         <article class="project-card" onclick="openCaseStudy('hipercap_tv')">
             <div class="project-thumb-box">
                 <img class="project-thumb-img" src="https://img.youtube.com/vi/K5JGDsgCqSY/hqdefault.jpg" alt="Hiper Cap Brasil — National Broadcast TV Commercials" loading="lazy">
@@ -1760,6 +2016,7 @@ header.site-header {
             </div>
         </article>
         
+
         </div>
     </section>
 
@@ -1776,189 +2033,169 @@ header.site-header {
             <div class="modal-meta-grid">
                 <div class="modal-meta-col">
                     <h5>Role</h5>
-                    <p id="modalRole">Motion Design & Direction</p>
+                    <p id="modalRole">Motion Design &amp; Direction</p>
                 </div>
                 <div class="modal-meta-col">
-                    <h5>Tools & Pipeline</h5>
+                    <h5>Tools &amp; Pipeline</h5>
                     <p id="modalTools">Blender, After Effects, Premiere</p>
                 </div>
                 <div class="modal-meta-col">
-                    <h5>Year & Scope</h5>
+                    <h5>Year &amp; Scope</h5>
                     <p id="modalYear">2026 • Commercial</p>
                 </div>
             </div>
 
-            <div class="modal-video-wrap">
+            <!-- Standard Video Wrapper for Normal Projects -->
+            <div class="modal-video-wrap" id="standardModalVideoWrap">
                 <div class="video-frame-16x9">
                     <iframe id="modalIframe" src="" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
 
-            <div class="modal-brief-section">
-                <h4 class="modal-section-title">Project Overview & Visual Concept</h4>
-                <div id="modalOverviewText"></div>
-            </div>
-
-            <div class="modal-bts-section">
-                <h4 class="modal-section-title">Creative Process & Behind the Scenes</h4>
-                <div class="bts-cards-grid" id="modalBtsGrid"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section: 3D Material Lab & Reorganized Finish Squares (Native Video Loops) -->
-    <section class="material-lab-section" id="material-lab">
-        <div class="section-heading-block">
-            <div>
-                <div class="section-eyebrow">Destaque 3D (Blender) • E-Commerce UX</div>
-                <h3 class="section-title-lg">Linha de Enobrecimentos — Simulação 3D no Blender</h3>
-            </div>
-            <p class="section-desc-lead">
-                Modelagem, física de materiais PBR e iluminação de estúdio no <strong>Blender</strong> para o e-commerce da FuturaIM. Animações fluidas em looping nativo mostrando a reação da luz ao acabamento em tempo real.
-            </p>
-        </div>
-
-        <!-- 1. Interactive Before x After Comparator (Native 60FPS Video Comparison) -->
-        <div class="comparator-wrapper" id="comparatorSection">
-            <div class="comparator-header-row">
-                <div>
-                    <div class="comparator-badge">Comparador Interativo de Valor</div>
-                    <h4 class="comparator-title">Antes x Depois: Papel Couché sem Acabamento vs. Enobrecimento 3D</h4>
-                    <p class="comparator-subtitle">
-                        Arraste o slider para comparar o papel cru contra o acabamento nobre em loop contínuo sincronizado.
-                    </p>
-                </div>
-                <div class="comparator-mode-switch">
-                    <button class="comp-mode-btn active" id="btnModeSplit" onclick="switchComparatorMode('split')" title="Slider dividido com arraste">
-                        <span>◧</span> Slider Dividido
-                    </button>
-                    <button class="comp-mode-btn" id="btnModeSbs" onclick="switchComparatorMode('sbs')" title="Exibição lado a lado sincronizada">
-                        <span>⇄</span> Lado a Lado
-                    </button>
-                </div>
-            </div>
-
-            <!-- Quick Presets -->
-            <div class="comparator-presets-scroll">
-                <span class="preset-label-tag">Escolha o Acabamento:</span>
-                <button class="preset-chip active" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4', 'Laminação Fosca e Verniz Localizado', 'Laminações', this)">
-                    ✨ Fosca &amp; Verniz Localizado
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4', 'Hot Stamping Ouro', 'Hot Stamping', this)">
-                    🥇 Hot Stamping Ouro
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4', 'Hot Stamping Dourado', 'Hot Stamping', this)">
-                    🏆 Hot Stamping Dourado
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Prata).mp4', 'Hot Stamping Prata', 'Hot Stamping', this)">
-                    🥈 Hot Stamping Prata
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Azul).mp4', 'Hot Stamping Azul', 'Hot Stamping', this)">
-                    💙 Hot Stamping Azul
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Vermelho).mp4', 'Hot Stamping Vermelho', 'Hot Stamping', this)">
-                    ❤️ Hot Stamping Vermelho
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Arco%20%C3%8Dris).mp4', 'Hot Stamping Arco-Íris', 'Hot Stamping', this)">
-                    🌈 Hot Stamping Arco-Íris
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Hologr%C3%A1fica.mp4', 'Laminação Holográfica (3D / Motion)', 'Laminações', this)">
-                    🔮 Laminação Holográfica 3D
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4', 'Laminação Soft Touch', 'Laminações', this)">
-                    ☁️ Laminação Soft Touch
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente', 'Laminações', this)">
-                    💡 Verniz Localizado
-                </button>
-                <button class="preset-chip" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4', 'Verniz Total Brilho', 'Laminações', this)">
-                    💎 Verniz Total Brilho
-                </button>
-            </div>
-
-            <!-- Mode 1: Split Slider View (Native Video Loops) -->
-            <div class="split-slider-box" id="splitSliderStage" style="--split-pos: 50%;">
-                <div class="split-layer split-layer-before">
-                    <div class="video-frame-16x9">
-                        <video id="compareBeforeVideo" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                            <source src="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" type="video/mp4">
-                        </video>
+            <!-- FuturaIM Dedicated 3D Material Lab (Inside the Case Study!) -->
+            <div id="futuraimDedicatedLab" style="display: none;">
+                
+                <!-- 1. Synchronized Multilateral 3D Comparator -->
+                <div class="modal-comparator-box" id="modalComparatorBox">
+                    <div class="comparator-header-row">
+                        <div>
+                            <div class="comparator-badge">Comparador Interativo Multilateral</div>
+                            <h4 class="comparator-title">Estúdio de Comparação 3D: Compare Qualquer Acabamento</h4>
+                            <p class="comparator-subtitle">
+                                Ambos os vídeos rodam travados no mesmo relógio a 60 FPS com rotação perfeitamente alinhada. Escolha dois acabamentos para avaliar as diferenças sutis de reflexo e cor.
+                            </p>
+                        </div>
+                        <div class="comparator-mode-switch">
+                            <button class="comp-mode-btn active" id="modalBtnSplit" onclick="switchModalCompMode('split')">
+                                <span>◧</span> Slider Dividido
+                            </button>
+                            <button class="comp-mode-btn" id="modalBtnSbs" onclick="switchModalCompMode('sbs')">
+                                <span>⇄</span> Lado a Lado
+                            </button>
+                        </div>
                     </div>
-                    <div class="split-pill-badge pill-before">
-                        <span class="pill-dot red"></span> ANTES: Sem Enobrecimento (Papel Couché)
-                    </div>
-                </div>
 
-                <div class="split-layer split-layer-after" id="splitLayerAfter">
-                    <div class="video-frame-16x9">
-                        <video id="compareAfterVideo" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                            <source src="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4" type="video/mp4">
-                        </video>
+                    <!-- 1-Click Comparison Presets -->
+                    <div class="comparator-presets-scroll">
+                        <span class="preset-label-tag">Comparações Rápidas:</span>
+                        <button class="preset-chip active" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4', 'Hot Stamping Ouro Frente', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4', 'Hot Stamping Dourado Frente', this)">
+                            🥇 Ouro vs. Dourado
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente', this)">
+                            💡 Sem Acabamento vs. Verniz Localizado
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4', 'Laminação Fosca e Verniz Localizado', this)">
+                            ✨ Sem Acabamento vs. Fosca + Verniz
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4', 'Hot Stamping Ouro Frente', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Prata).mp4', 'Hot Stamping Prata Frente', this)">
+                            🥈 Ouro vs. Prata
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Azul).mp4', 'Hot Stamping Azul Frente', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Vermelho).mp4', 'Hot Stamping Vermelho Frente', this)">
+                            💙 Azul vs. Vermelho
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4', 'Laminação Soft Touch Frente', this)">
+                            ☁️ Sem Acabamento vs. Soft Touch
+                        </button>
                     </div>
-                    <div class="split-pill-badge pill-after">
-                        <span class="pill-dot green"></span> DEPOIS: <span id="compareAfterLabel">Laminação Fosca e Verniz Localizado</span>
-                    </div>
-                </div>
 
-                <div class="split-divider-line" id="splitDivider">
-                    <div class="split-handle-knob" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
-                        <span class="knob-drag-text">ARRASTE</span>
+                    <!-- Dual Finish Dropdown Selectors -->
+                    <div class="dual-selector-bar">
+                        <div class="selector-col">
+                            <label for="selectLeftFinish" class="selector-label"><span class="dot-ind red"></span> Lado Esquerdo (Base):</label>
+                            <select id="selectLeftFinish" class="custom-select-finish" onchange="onSelectSideChange('left')">
+                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4">Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4">Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
+                            </select>
+                        </div>
+                        <div class="selector-vs-badge">VS</div>
+                        <div class="selector-col">
+                            <label for="selectRightFinish" class="selector-label"><span class="dot-ind green"></span> Lado Direito (Comparação):</label>
+                            <select id="selectRightFinish" class="custom-select-finish" onchange="onSelectSideChange('right')">
+                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4">Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4">Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <input type="range" min="0" max="100" value="50" class="split-range-input" id="splitRangeInput" aria-label="Comparar Antes e Depois" oninput="onSplitSliderMove(this.value)">
-            </div>
+                    <!-- Split Slider Stage in Modal -->
+                    <div class="split-slider-box" id="modalSplitSliderStage" style="--split-pos: 50%;">
+                        <div class="split-layer split-layer-before">
+                            <div class="video-frame-16x9">
+                                <video id="modalVidLeft" class="split-video-elem" autoplay loop muted playsinline preload="auto">
+                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="split-pill-badge pill-before">
+                                <span class="pill-dot red"></span> ESQUERDA: <span id="modalLabelLeft">Hot Stamping Ouro Frente</span>
+                            </div>
+                        </div>
 
-            <!-- Mode 2: Side-by-Side Dual View (Native Video Loops) -->
-            <div class="side-by-side-grid" id="sideBySideStage" style="display: none;">
-                <div class="sbs-card">
-                    <div class="sbs-header-bar">
-                        <span class="sbs-badge sbs-before">ANTES • Ponto Zero</span>
-                        <h5 class="sbs-finish-title">Sem Enobrecimento (Papel Couché Puro)</h5>
+                        <div class="split-layer split-layer-after" id="modalSplitLayerAfter">
+                            <div class="video-frame-16x9">
+                                <video id="modalVidRight" class="split-video-elem" autoplay loop muted playsinline preload="auto">
+                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="split-pill-badge pill-after">
+                                <span class="pill-dot green"></span> DIREITA: <span id="modalLabelRight">Hot Stamping Dourado Frente</span>
+                            </div>
+                        </div>
+
+                        <div class="split-divider-line" id="modalSplitDivider">
+                            <div class="split-handle-knob" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+                                <span class="knob-drag-text">ARRASTE</span>
+                            </div>
+                        </div>
+
+                        <input type="range" min="0" max="100" value="50" class="split-range-input" id="modalRangeInput" aria-label="Arraste para comparar" oninput="onModalSplitMove(this.value)">
                     </div>
-                    <div class="video-frame-16x9">
-                        <video id="sbsBeforeVideo" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                            <source src="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="sbs-physics-note">
-                        <strong>Física Óptica:</strong> Reflexão puramente difusa e fibra do papel couché fosco sob iluminação neutra, sem vernizes ou películas refletivas.
+
+                    <!-- Side by Side Stage in Modal -->
+                    <div class="side-by-side-grid" id="modalSbsStage" style="display: none;">
+                        <div class="sbs-card">
+                            <div class="sbs-header-bar">
+                                <span class="sbs-badge sbs-before">LADO ESQUERDO</span>
+                                <h5 class="sbs-finish-title" id="modalSbsTitleLeft">Hot Stamping Ouro Frente</h5>
+                            </div>
+                            <div class="video-frame-16x9">
+                                <video id="modalSbsVidLeft" class="split-video-elem" autoplay loop muted playsinline preload="auto">
+                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <div class="sbs-card">
+                            <div class="sbs-header-bar">
+                                <span class="sbs-badge sbs-after">LADO DIREITO</span>
+                                <h5 class="sbs-finish-title" id="modalSbsTitleRight">Hot Stamping Dourado Frente</h5>
+                            </div>
+                            <div class="video-frame-16x9">
+                                <video id="modalSbsVidRight" class="split-video-elem" autoplay loop muted playsinline preload="auto">
+                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="sbs-card">
-                    <div class="sbs-header-bar">
-                        <span class="sbs-badge sbs-after">DEPOIS • Enobrecimento 3D</span>
-                        <h5 class="sbs-finish-title" id="sbsAfterTitle">Laminação Fosca e Verniz Localizado</h5>
+                <!-- 2. Reorganized Finish Squares (Categorias em Quadradinhos com Nomes Embaixo) -->
+                <div class="finishes-categories-wrap" style="margin-top: 40px;">
+                    <div class="modal-section-title-bar">
+                        <h4 class="modal-section-title">Catálogo Completo em Quadradinhos Lado a Lado</h4>
+                        <p class="modal-section-sub">Cada vídeo roda em looping nativo a 60 FPS. Clique em "Comparar no Slider" para carregar no estúdio de comparação acima.</p>
                     </div>
-                    <div class="video-frame-16x9">
-                        <video id="sbsAfterVideo" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                            <source src="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="sbs-physics-note" id="sbsAfterPhysics">
-                        <strong>Física Óptica:</strong> Renderização física com absorção de luz da base fosca e alto contraste do verniz especular tipo vidro.
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- 2. Reorganized Finish Squares: Categorias em Quadradinhos com Nomes Embaixo -->
-        <div class="finishes-categories-wrap">
-            
-            <!-- Category A: Hot Stamping -->
-            <div class="finish-category-block" id="cat-hot-stamping">
-                <div class="cat-header-row">
-                    <div class="cat-title-stack">
-                        <span class="cat-badge-pill">Foil Metálico Nobre</span>
-                        <h4 class="cat-section-title">Hot Stamping</h4>
-                        <p class="cat-section-desc">Foco na física do reflexo especular metálico, chanfros de relevo e variações cromáticas sob rotação de luz de estúdio.</p>
-                    </div>
-                    <div class="cat-count-pill">6 acabamentos</div>
-                </div>
-                <div class="finishes-square-grid">
-                    
+                    <!-- Category: Hot Stamping -->
+                    <div class="finish-category-block">
+                        <div class="cat-header-row">
+                            <div class="cat-title-stack">
+                                <span class="cat-badge-pill">Foil Metálico Nobre</span>
+                                <h4 class="cat-section-title">Hot Stamping</h4>
+                                <p class="cat-section-desc">Foco na física do reflexo especular metálico, chanfros de relevo e variações de cor sob luz de estúdio.</p>
+                            </div>
+                            <div class="cat-count-pill">6 acabamentos</div>
+                        </div>
+                        <div class="finishes-square-grid">
+                            
     <div class="finish-square-card">
         <div class="finish-video-frame">
             <video class="finish-loop-video" autoplay loop muted playsinline preload="metadata">
@@ -1967,11 +2204,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Hot Stamping Azul Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4', 'Hot Stamping Azul Frente', 'Foil Azul Metálico', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4', 'Hot Stamping Azul Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -1983,11 +2222,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Hot Stamping Vermelho Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4', 'Hot Stamping Vermelho Frente', 'Foil Vermelho Escarlate', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4', 'Hot Stamping Vermelho Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -1999,11 +2240,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Dourado Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4', 'Laminação Soft Touch e Hot Stamping Dourado Frente', 'Foil Metálico & Luxo', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4', 'Laminação Soft Touch e Hot Stamping Dourado Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2015,11 +2258,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Prata Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4', 'Laminação Soft Touch e Hot Stamping Prata Frente', 'Foil Prateado Cromado', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4', 'Laminação Soft Touch e Hot Stamping Prata Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2031,11 +2276,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Hot Stamping Ouro Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4', 'Hot Stamping Ouro Frente', 'Foil Nobre 24K', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4', 'Hot Stamping Ouro Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2047,29 +2294,31 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Arco Íris Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4', 'Laminação Soft Touch e Hot Stamping Arco Íris Frente', 'Foil Prismático Furta-Cor', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4', 'Laminação Soft Touch e Hot Stamping Arco Íris Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
-                </div>
-            </div>
-
-            <!-- Category B: Laminações e Vernizes -->
-            <div class="finish-category-block" id="cat-laminacoes">
-                <div class="cat-header-row">
-                    <div class="cat-title-stack">
-                        <span class="cat-badge-pill">Luz, Textura &amp; Profundidade</span>
-                        <h4 class="cat-section-title">Laminações &amp; Vernizes UV</h4>
-                        <p class="cat-section-desc">Contraste entre o fundo mate fosco, camadas vitrificadas com máscara alpha, sensação aveludada Soft Touch e difração holográfica 3D.</p>
+                        </div>
                     </div>
-                    <div class="cat-count-pill">8 acabamentos</div>
-                </div>
-                <div class="finishes-square-grid">
-                    
+
+                    <!-- Category: Laminações e Vernizes -->
+                    <div class="finish-category-block">
+                        <div class="cat-header-row">
+                            <div class="cat-title-stack">
+                                <span class="cat-badge-pill">Luz, Textura &amp; Profundidade</span>
+                                <h4 class="cat-section-title">Laminações &amp; Vernizes UV</h4>
+                                <p class="cat-section-desc">Contraste entre o fundo mate fosco, camadas vitrificadas com máscara alpha, toque Soft Touch e difração holográfica 3D.</p>
+                            </div>
+                            <div class="cat-count-pill">8 acabamentos</div>
+                        </div>
+                        <div class="finishes-square-grid">
+                            
     <div class="finish-square-card">
         <div class="finish-video-frame">
             <video class="finish-loop-video" autoplay loop muted playsinline preload="metadata">
@@ -2078,11 +2327,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Fosca e Verniz Localizado Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4', 'Laminação Fosca e Verniz Localizado Frente', 'O Contraste Definitivo', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4', 'Laminação Fosca e Verniz Localizado Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2094,11 +2345,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Verniz Localizado Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente', 'Alto Brilho Pontual', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2110,11 +2363,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Verniz Total Brilho Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4', 'Verniz Total Brilho Frente', 'Acabamento Vitrificado', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4', 'Verniz Total Brilho Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2126,11 +2381,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Verniz Total Brilho Frente e Verso</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4', 'Verniz Total Brilho Frente e Verso', 'Proteção Integral 360°', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4', 'Verniz Total Brilho Frente e Verso')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2142,11 +2399,11 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Holográfica (3D / Motion) Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Hologr%C3%A1fica.mp4', 'Laminação Holográfica (3D / Motion) Frente', 'Difração Furta-Cor Dinâmica', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <span class="square-tag-pill">Loop Especial 12s</span>
+        </div>
+        
         </div>
     </div>
     
@@ -2158,11 +2415,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Soft Touch Frente</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4', 'Laminação Soft Touch Frente', 'Toque Aveludado Peach-Skin', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4', 'Laminação Soft Touch Frente')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2174,11 +2433,13 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Laminação Fosca Frente e Verso</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4', 'Laminação Fosca Frente e Verso', 'Toque Mate 360°', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4', 'Laminação Fosca Frente e Verso')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
@@ -2190,31 +2451,109 @@ header.site-header {
         </div>
         <div class="finish-square-info">
             <h5 class="finish-square-name">Sem Enobrecimento (Papel Couché Puro)</h5>
-            <div class="finish-square-actions">
-                <button class="square-compare-btn" onclick="setCompareFinishNative('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Couché Puro)', 'Papel Couché Padrão', this)" title="Carregar no Comparador Antes x Depois">
-                    ⇄ Comparar no Slider
-                </button>
-            </div>
+            
+        <div class="finish-square-actions">
+            <button class="square-compare-btn" onclick="setModalCompareSide('right', 'Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Couché Puro)')" title="Comparar no Slider">
+                ⇄ Comparar no Slider
+            </button>
+        </div>
+        
         </div>
     </div>
     
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
+            <div class="modal-brief-section">
+                <h4 class="modal-section-title">Project Overview &amp; Visual Concept</h4>
+                <div id="modalOverviewText"></div>
+            </div>
+
+            <div class="modal-bts-section">
+                <h4 class="modal-section-title">Creative Process &amp; Behind the Scenes</h4>
+                <div class="bts-cards-grid" id="modalBtsGrid"></div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <script>
-    function onSplitSliderMove(val) {
-        const stage = document.getElementById('splitSliderStage');
+    // Teaser Card Needle Move
+    function onTeaserMove(val) {
+        const box = document.getElementById('teaserSliderBox');
+        if (box) box.style.setProperty('--teaser-pos', val + '%');
+    }
+
+    // Teaser Card Videos Sync
+    function syncTeaserVideos() {
+        const vA = document.getElementById('teaserVidBefore');
+        const vB = document.getElementById('teaserVidAfter');
+        if (!vA || !vB) return;
+
+        vA.muted = true;
+        vB.muted = true;
+
+        vA.addEventListener('timeupdate', () => {
+            if (Math.abs(vB.currentTime - vA.currentTime) > 0.04) {
+                vB.currentTime = vA.currentTime;
+            }
+        });
+        vA.addEventListener('play', () => {
+            vB.currentTime = vA.currentTime;
+            vB.play().catch(() => {});
+        });
+        vA.addEventListener('pause', () => vB.pause());
+    }
+
+    // Modal Comparator Clock Synchronization (Master: Left Video)
+    function syncModalVideos() {
+        const vLeft = document.getElementById('modalVidLeft');
+        const vRight = document.getElementById('modalVidRight');
+        const sbsL = document.getElementById('modalSbsVidLeft');
+        const sbsR = document.getElementById('modalSbsVidRight');
+        if (!vLeft || !vRight) return;
+
+        vLeft.muted = true;
+        vRight.muted = true;
+        if (sbsL) sbsL.muted = true;
+        if (sbsR) sbsR.muted = true;
+
+        vLeft.ontimeupdate = () => {
+            const cur = vLeft.currentTime;
+            if (Math.abs(vRight.currentTime - cur) > 0.04) {
+                vRight.currentTime = cur;
+            }
+            if (sbsL && Math.abs(sbsL.currentTime - cur) > 0.04) sbsL.currentTime = cur;
+            if (sbsR && Math.abs(sbsR.currentTime - cur) > 0.04) sbsR.currentTime = cur;
+        };
+
+        vLeft.onplay = () => {
+            const cur = vLeft.currentTime;
+            vRight.currentTime = cur;
+            vRight.play().catch(() => {});
+            if (sbsL) { sbsL.currentTime = cur; sbsL.play().catch(() => {}); }
+            if (sbsR) { sbsR.currentTime = cur; sbsR.play().catch(() => {}); }
+        };
+
+        vLeft.onpause = () => {
+            vRight.pause();
+            if (sbsL) sbsL.pause();
+            if (sbsR) sbsR.pause();
+        };
+    }
+
+    function onModalSplitMove(val) {
+        const stage = document.getElementById('modalSplitSliderStage');
         if (stage) stage.style.setProperty('--split-pos', val + '%');
     }
 
-    function switchComparatorMode(mode) {
-        const splitStage = document.getElementById('splitSliderStage');
-        const sbsStage = document.getElementById('sideBySideStage');
-        const btnSplit = document.getElementById('btnModeSplit');
-        const btnSbs = document.getElementById('btnModeSbs');
+    function switchModalCompMode(mode) {
+        const splitStage = document.getElementById('modalSplitSliderStage');
+        const sbsStage = document.getElementById('modalSbsStage');
+        const btnSplit = document.getElementById('modalBtnSplit');
+        const btnSbs = document.getElementById('modalBtnSbs');
 
         if (mode === 'split') {
             splitStage.style.display = 'block';
@@ -2229,47 +2568,69 @@ header.site-header {
         }
     }
 
-    function setCompareFinishNative(videoSrc, title, tag, btnElement) {
-        const afterLabel = document.getElementById('compareAfterLabel');
-        const sbsTitle = document.getElementById('sbsAfterTitle');
-        if (afterLabel) afterLabel.innerText = title;
-        if (sbsTitle) sbsTitle.innerText = title;
+    function setModalCompareSide(side, src, name) {
+        const vidElem = side === 'left' ? document.getElementById('modalVidLeft') : document.getElementById('modalVidRight');
+        const sbsElem = side === 'left' ? document.getElementById('modalSbsVidLeft') : document.getElementById('modalSbsVidRight');
+        const labelElem = side === 'left' ? document.getElementById('modalLabelLeft') : document.getElementById('modalLabelRight');
+        const sbsTitle = side === 'left' ? document.getElementById('modalSbsTitleLeft') : document.getElementById('modalSbsTitleRight');
+        const selectElem = side === 'left' ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
+        const masterVid = document.getElementById('modalVidLeft');
 
-        const compareAfter = document.getElementById('compareAfterVideo');
-        const sbsAfter = document.getElementById('sbsAfterVideo');
-        
-        if (compareAfter) {
-            compareAfter.src = videoSrc;
-            compareAfter.load();
-            compareAfter.play().catch(e => console.log('Autoplay:', e));
-        }
-        if (sbsAfter) {
-            sbsAfter.src = videoSrc;
-            sbsAfter.load();
-            sbsAfter.play().catch(e => console.log('Autoplay:', e));
-        }
+        if (labelElem) labelElem.innerText = name;
+        if (sbsTitle) sbsTitle.innerText = name;
 
-        // Sync playback time with the Before video
-        const beforeVid = document.getElementById('compareBeforeVideo');
-        if (beforeVid && compareAfter) {
-            compareAfter.currentTime = beforeVid.currentTime;
+        if (selectElem) {
+            for (let opt of selectElem.options) {
+                if (opt.value === src || decodeURIComponent(opt.value) === decodeURIComponent(src)) {
+                    selectElem.value = opt.value;
+                    break;
+                }
+            }
         }
 
-        document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
-        if (btnElement) {
-            btnElement.classList.add('active');
+        if (vidElem) {
+            vidElem.src = src;
+            vidElem.oncanplay = function() {
+                if (masterVid) vidElem.currentTime = masterVid.currentTime;
+                vidElem.play().catch(() => {});
+            };
+            vidElem.load();
+        }
+        if (sbsElem) {
+            sbsElem.src = src;
+            sbsElem.oncanplay = function() {
+                if (masterVid) sbsElem.currentTime = masterVid.currentTime;
+                sbsElem.play().catch(() => {});
+            };
+            sbsElem.load();
         }
 
-        const comp = document.getElementById('comparatorSection');
-        if (comp) comp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const compBox = document.getElementById('modalComparatorBox');
+        if (compBox) compBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Ensure all videos autoplay smoothly in loop
+    function onSelectSideChange(side) {
+        const select = side === 'left' ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
+        if (!select) return;
+        const src = select.value;
+        const name = select.options[select.selectedIndex].text;
+        setModalCompareSide(side, src, name);
+    }
+
+    function loadComparisonPair(srcL, nameL, srcR, nameR, btnElem) {
+        setModalCompareSide('left', srcL, nameL);
+        setModalCompareSide('right', srcR, nameR);
+
+        document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+        if (btnElem) btnElem.classList.add('active');
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.finish-loop-video, .split-video-elem').forEach(v => {
-            v.muted = true;
-            v.play().catch(e => console.log('Video play policy:', e));
-        });
+        syncTeaserVideos();
+        const sL = document.getElementById('selectLeftFinish');
+        const sR = document.getElementById('selectRightFinish');
+        if (sL) sL.selectedIndex = 3; // Ouro
+        if (sR) sR.selectedIndex = 4; // Dourado
     });
     </script>
 
