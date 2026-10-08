@@ -1908,7 +1908,7 @@ header.site-header {
                     <div class="project-meta-row">
                         <div class="tools-pill-group">
                             <span class="tool-tag">Blender 3D</span>
-                            <span class="tool-tag">Cycles PBR</span>
+                            <span class="tool-tag">PBR Shaders</span>
                             <span class="tool-tag">E-Commerce UX</span>
                         </div>
                         <span class="view-case-link">Abrir Laboratório Completo &rarr;</span>
@@ -2107,14 +2107,14 @@ header.site-header {
                         </div>
                     </div>
 
-                    <!-- 1-Click Comparison Presets -->
+                    <!-- 1-Click Comparison Presets (Default: Sem Acabamento vs. Verniz Localizado) -->
                     <div class="comparator-presets-scroll">
                         <span class="preset-label-tag">Comparações Rápidas:</span>
-                        <button class="preset-chip active" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4', 'Hot Stamping Ouro Frente', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4', 'Hot Stamping Dourado Frente', this)">
-                            🥇 Ouro vs. Dourado
-                        </button>
-                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente', this)">
+                        <button class="preset-chip active" id="chipDefaultPair" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4', 'Verniz Localizado Frente', this)">
                             💡 Sem Acabamento vs. Verniz Localizado
+                        </button>
+                        <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4', 'Hot Stamping Ouro Frente', 'Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4', 'Hot Stamping Dourado Frente', this)">
+                            🥇 Ouro vs. Dourado
                         </button>
                         <button class="preset-chip" onclick="loadComparisonPair('Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4', 'Sem Enobrecimento (Papel Cru)', 'Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4', 'Laminação Fosca e Verniz Localizado', this)">
                             ✨ Sem Acabamento vs. Fosca + Verniz
@@ -2135,39 +2135,39 @@ header.site-header {
                         <div class="selector-col">
                             <label for="selectLeftFinish" class="selector-label"><span class="dot-ind red"></span> Lado Esquerdo (Base):</label>
                             <select id="selectLeftFinish" class="custom-select-finish" onchange="onSelectSideChange('left')">
-                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4">Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4">Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
+                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" selected>Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4">Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
                             </select>
                         </div>
                         <div class="selector-vs-badge">VS</div>
                         <div class="selector-col">
                             <label for="selectRightFinish" class="selector-label"><span class="dot-ind green"></span> Lado Direito (Comparação):</label>
                             <select id="selectRightFinish" class="custom-select-finish" onchange="onSelectSideChange('right')">
-                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4">Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4">Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
+                                <option value="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4">Sem Enobrecimento (Papel Cru)</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4" selected>Verniz Localizado Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20fosca%20e%20Verniz%20localizado.mp4">Laminação Fosca e Verniz Localizado</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Ouro%29.mp4">Hot Stamping Ouro Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Dourado%29.mp4">Hot Stamping Dourado Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Prata%29.mp4">Hot Stamping Prata Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Azul%29.mp4">Hot Stamping Azul Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Vermelho%29.mp4">Hot Stamping Vermelho Frente</option><option value="Assets/Videos/Enobrecimentos/Hot%20Stamping%20%28Arco%20%C3%8Dris%29.mp4">Hot Stamping Arco-Íris Frente</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Soft%20Touch.mp4">Laminação Soft Touch Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente.mp4">Verniz Total Brilho Frente</option><option value="Assets/Videos/Enobrecimentos/Verniz%20Total%20Brilho%20Frente%20e%20Verso.mp4">Verniz Total Brilho Frente e Verso</option><option value="Assets/Videos/Enobrecimentos/Lamina%C3%A7%C3%A3o%20Fosca%20Frente%20e%20Verso.mp4">Laminação Fosca Frente e Verso</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Split Slider Stage in Modal -->
+                    <!-- Split Slider Stage in Modal (Default: Sem Enobrecimento vs Verniz Localizado) -->
                     <div class="split-slider-box" id="modalSplitSliderStage" style="--split-pos: 50%;">
                         <div class="split-layer split-layer-before">
                             <div class="video-frame-16x9">
                                 <video id="modalVidLeft" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4" type="video/mp4">
+                                    <source src="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="split-pill-badge pill-before">
-                                <span class="pill-dot red"></span> ESQUERDA: <span id="modalLabelLeft">Hot Stamping Ouro Frente</span>
+                                <span class="pill-dot red"></span> ESQUERDA: <span id="modalLabelLeft">Sem Enobrecimento (Papel Cru)</span>
                             </div>
                         </div>
 
                         <div class="split-layer split-layer-after" id="modalSplitLayerAfter">
                             <div class="video-frame-16x9">
                                 <video id="modalVidRight" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4" type="video/mp4">
+                                    <source src="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="split-pill-badge pill-after">
-                                <span class="pill-dot green"></span> DIREITA: <span id="modalLabelRight">Hot Stamping Dourado Frente</span>
+                                <span class="pill-dot green"></span> DIREITA: <span id="modalLabelRight">Verniz Localizado Frente</span>
                             </div>
                         </div>
 
@@ -2186,11 +2186,11 @@ header.site-header {
                         <div class="sbs-card">
                             <div class="sbs-header-bar">
                                 <span class="sbs-badge sbs-before">LADO ESQUERDO</span>
-                                <h5 class="sbs-finish-title" id="modalSbsTitleLeft">Hot Stamping Ouro Frente</h5>
+                                <h5 class="sbs-finish-title" id="modalSbsTitleLeft">Sem Enobrecimento (Papel Cru)</h5>
                             </div>
                             <div class="video-frame-16x9">
                                 <video id="modalSbsVidLeft" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Ouro).mp4" type="video/mp4">
+                                    <source src="Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -2198,11 +2198,11 @@ header.site-header {
                         <div class="sbs-card">
                             <div class="sbs-header-bar">
                                 <span class="sbs-badge sbs-after">LADO DIREITO</span>
-                                <h5 class="sbs-finish-title" id="modalSbsTitleRight">Hot Stamping Dourado Frente</h5>
+                                <h5 class="sbs-finish-title" id="modalSbsTitleRight">Verniz Localizado Frente</h5>
                             </div>
                             <div class="video-frame-16x9">
                                 <video id="modalSbsVidRight" class="split-video-elem" autoplay loop muted playsinline preload="auto">
-                                    <source src="Assets/Videos/Enobrecimentos/Hot%20Stamping%20(Dourado).mp4" type="video/mp4">
+                                    <source src="Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -2518,7 +2518,64 @@ header.site-header {
         if (box) box.style.setProperty('--teaser-pos', val + '%');
     }
 
-    // Teaser Card Videos Sync
+    // Global Video Switcher & Play helpers
+    let isSwitchingVideo = false;
+    let modalSyncInitDone = false;
+    let lastModalSyncTime = 0;
+    let lastLeftTime = 0;
+
+    function safePlay(v) {
+        if (!v) return;
+        v.muted = true;
+        try {
+            const p = v.play();
+            if (p && typeof p.catch === 'function') {
+                p.catch(() => {});
+            }
+        } catch(e) {}
+    }
+
+    function changeVideoSrc(video, newSrc, seekTime) {
+        if (!video) return Promise.resolve();
+        return new Promise(resolve => {
+            video.muted = true;
+            let finished = false;
+
+            function done() {
+                if (finished) return;
+                finished = true;
+                video.removeEventListener('loadeddata', onData);
+                video.removeEventListener('error', onError);
+                safePlay(video);
+                resolve();
+            }
+
+            function onData() {
+                video.muted = true;
+                if (typeof seekTime === 'number' && seekTime > 0.05) {
+                    try {
+                        video.currentTime = seekTime;
+                    } catch(e) {}
+                }
+                done();
+            }
+
+            function onError() {
+                done();
+            }
+
+            video.addEventListener('loadeddata', onData, { once: true });
+            video.addEventListener('error', onError, { once: true });
+            setTimeout(done, 500);
+
+            video.src = newSrc;
+            try {
+                video.load();
+            } catch(e) {}
+        });
+    }
+
+    // Teaser Card Videos Sync (on homepage)
     function syncTeaserVideos() {
         const vA = document.getElementById('teaserVidBefore');
         const vB = document.getElementById('teaserVidAfter');
@@ -2527,19 +2584,26 @@ header.site-header {
         vA.muted = true;
         vB.muted = true;
 
+        let lastTeaserSync = 0;
         vA.addEventListener('timeupdate', () => {
-            if (Math.abs(vB.currentTime - vA.currentTime) > 0.04) {
-                vB.currentTime = vA.currentTime;
+            const cur = vA.currentTime;
+            const now = Date.now();
+            if (cur < 0.2) {
+                if (vB.readyState >= 2 && !vB.seeking) vB.currentTime = cur;
+            } else if (now - lastTeaserSync > 400) {
+                if (vB.readyState >= 3 && !vB.seeking) {
+                    if (Math.abs(vB.currentTime - cur) > 0.15) {
+                        lastTeaserSync = now;
+                        vB.currentTime = cur;
+                    }
+                }
             }
         });
-        vA.addEventListener('play', () => {
-            vB.currentTime = vA.currentTime;
-            vB.play().catch(() => {});
-        });
+        vA.addEventListener('play', () => safePlay(vB));
         vA.addEventListener('pause', () => vB.pause());
     }
 
-    // Modal Comparator Clock Synchronization (Master: Left Video)
+    // Modal Comparator Synchronization
     function syncModalVideos() {
         const vLeft = document.getElementById('modalVidLeft');
         const vRight = document.getElementById('modalVidRight');
@@ -2552,28 +2616,67 @@ header.site-header {
         if (sbsL) sbsL.muted = true;
         if (sbsR) sbsR.muted = true;
 
-        vLeft.ontimeupdate = () => {
+        safePlay(vLeft);
+        safePlay(vRight);
+        if (sbsL) safePlay(sbsL);
+        if (sbsR) safePlay(sbsR);
+
+        if (modalSyncInitDone) return;
+        modalSyncInitDone = true;
+
+        vLeft.addEventListener('timeupdate', () => {
+            if (isSwitchingVideo) return;
             const cur = vLeft.currentTime;
-            if (Math.abs(vRight.currentTime - cur) > 0.04) {
-                vRight.currentTime = cur;
+            const now = Date.now();
+
+            // 1. Detect loop wrap-around (when left video loops back to 0)
+            if (cur < lastLeftTime - 1.0) {
+                if (vRight && !vRight.seeking && vRight.readyState >= 2) {
+                    vRight.currentTime = cur;
+                    safePlay(vRight);
+                }
+                if (sbsL && !sbsL.seeking && sbsL.readyState >= 2) {
+                    sbsL.currentTime = cur;
+                    safePlay(sbsL);
+                }
+                if (sbsR && !sbsR.seeking && sbsR.readyState >= 2) {
+                    sbsR.currentTime = cur;
+                    safePlay(sbsR);
+                }
+                lastModalSyncTime = now;
             }
-            if (sbsL && Math.abs(sbsL.currentTime - cur) > 0.04) sbsL.currentTime = cur;
-            if (sbsR && Math.abs(sbsR.currentTime - cur) > 0.04) sbsR.currentTime = cur;
-        };
+            // 2. Normal drift alignment (debounced to 400ms, threshold 0.15s)
+            else if (now - lastModalSyncTime > 400) {
+                if (vRight && !vRight.seeking && vRight.readyState >= 3 && !vRight.paused) {
+                    const diff = Math.abs(cur - vRight.currentTime);
+                    if (diff > 0.15 && diff < 7.2) {
+                        lastModalSyncTime = now;
+                        vRight.currentTime = cur;
+                    }
+                }
+            }
+            lastLeftTime = cur;
+        });
 
-        vLeft.onplay = () => {
-            const cur = vLeft.currentTime;
-            vRight.currentTime = cur;
-            vRight.play().catch(() => {});
-            if (sbsL) { sbsL.currentTime = cur; sbsL.play().catch(() => {}); }
-            if (sbsR) { sbsR.currentTime = cur; sbsR.play().catch(() => {}); }
-        };
+        vLeft.addEventListener('play', () => {
+            if (isSwitchingVideo) return;
+            safePlay(vRight);
+            if (sbsL) safePlay(sbsL);
+            if (sbsR) safePlay(sbsR);
+        });
 
-        vLeft.onpause = () => {
-            vRight.pause();
+        vLeft.addEventListener('pause', () => {
+            if (isSwitchingVideo) return;
+            if (vRight) vRight.pause();
             if (sbsL) sbsL.pause();
             if (sbsR) sbsR.pause();
-        };
+        });
+
+        vRight.addEventListener('pause', () => {
+            if (!isSwitchingVideo && vLeft && !vLeft.paused) {
+                safePlay(vRight);
+            }
+        });
     }
 
     function onModalSplitMove(val) {
@@ -2601,12 +2704,16 @@ header.site-header {
     }
 
     function setModalCompareSide(side, src, name) {
-        const vidElem = side === 'left' ? document.getElementById('modalVidLeft') : document.getElementById('modalVidRight');
-        const sbsElem = side === 'left' ? document.getElementById('modalSbsVidLeft') : document.getElementById('modalSbsVidRight');
-        const labelElem = side === 'left' ? document.getElementById('modalLabelLeft') : document.getElementById('modalLabelRight');
-        const sbsTitle = side === 'left' ? document.getElementById('modalSbsTitleLeft') : document.getElementById('modalSbsTitleRight');
-        const selectElem = side === 'left' ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
-        const masterVid = document.getElementById('modalVidLeft');
+        isSwitchingVideo = true;
+        document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+
+        const isLeft = (side === 'left');
+        const vidElem = isLeft ? document.getElementById('modalVidLeft') : document.getElementById('modalVidRight');
+        const sbsElem = isLeft ? document.getElementById('modalSbsVidLeft') : document.getElementById('modalSbsVidRight');
+        const labelElem = isLeft ? document.getElementById('modalLabelLeft') : document.getElementById('modalLabelRight');
+        const sbsTitle = isLeft ? document.getElementById('modalSbsTitleLeft') : document.getElementById('modalSbsTitleRight');
+        const selectElem = isLeft ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
+        const refVid = isLeft ? document.getElementById('modalVidRight') : document.getElementById('modalVidLeft');
 
         if (labelElem) labelElem.innerText = name;
         if (sbsTitle) sbsTitle.innerText = name;
@@ -2620,29 +2727,23 @@ header.site-header {
             }
         }
 
-        if (vidElem) {
-            vidElem.src = src;
-            vidElem.oncanplay = function() {
-                if (masterVid) vidElem.currentTime = masterVid.currentTime;
-                vidElem.play().catch(() => {});
-            };
-            vidElem.load();
-        }
-        if (sbsElem) {
-            sbsElem.src = src;
-            sbsElem.oncanplay = function() {
-                if (masterVid) sbsElem.currentTime = masterVid.currentTime;
-                sbsElem.play().catch(() => {});
-            };
-            sbsElem.load();
-        }
+        const seekTime = (refVid && refVid.currentTime > 0) ? (refVid.currentTime % 8) : 0;
+
+        Promise.all([
+            changeVideoSrc(vidElem, src, seekTime),
+            changeVideoSrc(sbsElem, src, seekTime)
+        ]).then(() => {
+            setTimeout(() => {
+                isSwitchingVideo = false;
+            }, 150);
+        });
 
         const compBox = document.getElementById('modalComparatorBox');
         if (compBox) compBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function onSelectSideChange(side) {
-        const select = side === 'left' ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
+        const select = (side === 'left') ? document.getElementById('selectLeftFinish') : document.getElementById('selectRightFinish');
         if (!select) return;
         const src = select.value;
         const name = select.options[select.selectedIndex].text;
@@ -2650,22 +2751,95 @@ header.site-header {
     }
 
     function loadComparisonPair(srcL, nameL, srcR, nameR, btnElem) {
-        setModalCompareSide('left', srcL, nameL);
-        setModalCompareSide('right', srcR, nameR);
+        isSwitchingVideo = true;
 
         document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
         if (btnElem) btnElem.classList.add('active');
+
+        const vLeft = document.getElementById('modalVidLeft');
+        const vRight = document.getElementById('modalVidRight');
+        const sbsL = document.getElementById('modalSbsVidLeft');
+        const sbsR = document.getElementById('modalSbsVidRight');
+        const lblL = document.getElementById('modalLabelLeft');
+        const lblR = document.getElementById('modalLabelRight');
+        const sbsTL = document.getElementById('modalSbsTitleLeft');
+        const sbsTR = document.getElementById('modalSbsTitleRight');
+        const selL = document.getElementById('selectLeftFinish');
+        const selR = document.getElementById('selectRightFinish');
+
+        if (lblL) lblL.innerText = nameL;
+        if (lblR) lblR.innerText = nameR;
+        if (sbsTL) sbsTL.innerText = nameL;
+        if (sbsTR) sbsTR.innerText = nameR;
+
+        if (selL) {
+            for (let opt of selL.options) {
+                if (opt.value === srcL || decodeURIComponent(opt.value) === decodeURIComponent(srcL)) {
+                    selL.value = opt.value;
+                    break;
+                }
+            }
+        }
+        if (selR) {
+            for (let opt of selR.options) {
+                if (opt.value === srcR || decodeURIComponent(opt.value) === decodeURIComponent(srcR)) {
+                    selR.value = opt.value;
+                    break;
+                }
+            }
+        }
+
+        Promise.all([
+            changeVideoSrc(vLeft, srcL, 0),
+            changeVideoSrc(vRight, srcR, 0),
+            changeVideoSrc(sbsL, srcL, 0),
+            changeVideoSrc(sbsR, srcR, 0)
+        ]).then(() => {
+            setTimeout(() => {
+                if (vLeft) { vLeft.currentTime = 0; safePlay(vLeft); }
+                if (vRight) { vRight.currentTime = 0; safePlay(vRight); }
+                if (sbsL) { sbsL.currentTime = 0; safePlay(sbsL); }
+                if (sbsR) { sbsR.currentTime = 0; safePlay(sbsR); }
+                isSwitchingVideo = false;
+            }, 120);
+        });
+    }
+
+    function resetToDefaultComparison() {
+        const vLeft = document.getElementById('modalVidLeft');
+        const vRight = document.getElementById('modalVidRight');
+        const defaultLeftSrc = "Assets/Videos/Enobrecimentos/Sem%20Enobrecimento.mp4";
+        const defaultRightSrc = "Assets/Videos/Enobrecimentos/Verniz%20Localizado%20Frente.mp4";
+
+        const leftIsDefault = vLeft && (vLeft.currentSrc.includes("Sem%20Enobrecimento") || decodeURIComponent(vLeft.currentSrc).includes("Sem Enobrecimento"));
+        const rightIsDefault = vRight && (vRight.currentSrc.includes("Verniz%20Localizado%20Frente") || decodeURIComponent(vRight.currentSrc).includes("Verniz Localizado Frente"));
+
+        if (leftIsDefault && rightIsDefault) {
+            if (vLeft) { vLeft.currentTime = 0; safePlay(vLeft); }
+            if (vRight) { vRight.currentTime = 0; safePlay(vRight); }
+            document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+            const defChip = document.getElementById('chipDefaultPair');
+            if (defChip) defChip.classList.add('active');
+        } else {
+            loadComparisonPair(
+                defaultLeftSrc,
+                'Sem Enobrecimento (Papel Cru)',
+                defaultRightSrc,
+                'Verniz Localizado Frente',
+                document.getElementById('chipDefaultPair')
+            );
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function() {
         syncTeaserVideos();
         const sL = document.getElementById('selectLeftFinish');
         const sR = document.getElementById('selectRightFinish');
-        if (sL) sL.selectedIndex = 3; // Ouro
-        if (sR) sR.selectedIndex = 4; // Dourado
+        if (sL) sL.selectedIndex = 0;
+        if (sR) sR.selectedIndex = 1;
     });
     </script>
-
+    
     <!-- Section: Interactive Carousels (Restored Full Archive) -->
     <section class="archive-section" id="archive">
         <div class="section-heading-block">
@@ -3028,11 +3202,12 @@ function openCaseStudy(projectId) {
     if (projectId === 'futuraim_3d') {
         if (stdWrap) stdWrap.style.display = 'none';
         if (labWrap) labWrap.style.display = 'block';
-        if (typeof syncModalVideos === 'function') syncModalVideos();
-        const vL = document.getElementById('modalVidLeft');
-        const vR = document.getElementById('modalVidRight');
-        if (vL) { vL.currentTime = 0; vL.play().catch(() => {}); }
-        if (vR) { vR.currentTime = 0; vR.play().catch(() => {}); }
+        if (typeof resetToDefaultComparison === 'function') {
+            resetToDefaultComparison();
+        }
+        if (typeof syncModalVideos === 'function') {
+            syncModalVideos();
+        }
     } else {
         if (stdWrap) stdWrap.style.display = 'block';
         if (labWrap) labWrap.style.display = 'none';
