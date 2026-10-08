@@ -417,6 +417,683 @@ header.site-header {
   .modal-dialog-box { padding: 20px 16px; }
 }
 
+/* -------------------------------------------------------------------------
+   Material Lab, Before x After Slider & Sensory Families Styles
+   ------------------------------------------------------------------------- */
+.material-lab-section {
+  margin: 90px 0;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparator-wrapper {
+  background: rgba(14, 16, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
+}
+
+.comparator-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.comparator-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(184, 29, 91, 0.2);
+  border: 1px solid var(--wine);
+  border-radius: 999px;
+  color: var(--wine-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.comparator-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.comparator-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 650px;
+}
+
+.comparator-mode-switch {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comp-mode-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.comp-mode-btn.active {
+  background: linear-gradient(135deg, var(--wine), var(--crimson));
+  color: #fff;
+  box-shadow: 0 4px 12px var(--wine-glow);
+}
+
+.comparator-presets-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  align-items: center;
+  scrollbar-width: thin;
+}
+
+.preset-label-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.preset-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.preset-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.preset-chip.active {
+  background: rgba(184, 29, 91, 0.25);
+  border-color: var(--wine);
+  color: #fff;
+  box-shadow: 0 0 14px var(--wine-glow);
+}
+
+/* Split Slider Stage */
+.split-slider-box {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  user-select: none;
+}
+
+.split-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.split-layer-before {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.split-layer-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: inset(0 0 0 var(--split-pos, 50%));
+}
+
+.split-pill-badge {
+  position: absolute;
+  top: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.pill-before {
+  left: 16px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+}
+
+.pill-after {
+  right: 16px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  color: #86efac;
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pill-dot.red {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.pill-dot.green {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.split-divider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--split-pos, 50%);
+  width: 2.5px;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.9), 0 0 25px var(--crimson);
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.split-handle-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(16, 18, 27, 0.95);
+  border: 2.5px solid #fff;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.85), 0 0 22px var(--wine-glow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 2px;
+}
+
+.knob-drag-text {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--wine-light);
+}
+
+.split-range-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 15;
+}
+
+/* Side by Side Dual Mode */
+.side-by-side-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.sbs-card {
+  background: rgba(20, 24, 36, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sbs-header-bar {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sbs-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.sbs-before {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.sbs-after {
+  background: rgba(16, 185, 129, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.sbs-finish-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sbs-physics-note {
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(10, 12, 18, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.comparator-footer-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  color: #fde68a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.insight-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* 4 Sensory Finish Families Tabs */
+.families-container-box {
+  margin-top: 20px;
+}
+
+.families-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.families-subheadline {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.family-tabs-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.family-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.family-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.family-tab-btn.active {
+  background: linear-gradient(135deg, rgba(184, 29, 91, 0.22), rgba(225, 29, 72, 0.15));
+  border-color: var(--wine);
+  color: #fff;
+  box-shadow: 0 8px 24px var(--wine-glow);
+}
+
+.tab-icon {
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.tab-text-group {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tab-main-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-sub-label {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-counter-badge {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Active Family Focus Panel */
+.family-focus-panel {
+  background: linear-gradient(135deg, rgba(24, 27, 40, 0.7), rgba(16, 18, 27, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+}
+
+.focus-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.focus-badge-stack {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.focus-group-pill {
+  background: rgba(184, 29, 91, 0.25);
+  border: 1px solid var(--wine);
+  color: var(--wine-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.focus-spec-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.focus-title-lg {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.focus-desc-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* Finishes Cards Grid */
+.finishes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.finish-item-card {
+  background: rgba(18, 20, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.finish-item-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(225, 29, 72, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.finish-thumb-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #000;
+}
+
+.finish-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.finish-item-card:hover .finish-thumb-img {
+  transform: scale(1.05);
+}
+
+.finish-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  cursor: pointer;
+}
+
+.finish-item-card:hover .finish-thumb-overlay {
+  opacity: 1;
+}
+
+.finish-tag-chip {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(9, 10, 15, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.finish-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.finish-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.finish-card-notes {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.finish-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 12px;
+}
+
+.finish-card-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-finish-compare {
+  background: rgba(184, 29, 91, 0.15);
+  border: 1px solid var(--wine);
+  color: var(--wine-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-finish-compare:hover {
+  background: var(--wine);
+  color: #fff;
+}
+
+.btn-finish-play {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-finish-play:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.finish-cinema-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .family-tabs-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .side-by-side-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .family-tabs-bar {
+    grid-template-columns: 1fr;
+  }
+  .comparator-wrapper {
+    padding: 20px 14px;
+  }
+  .split-handle-knob {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -434,6 +1111,7 @@ header.site-header {
 
         <nav class="nav-links">
             <a href="#works" class="nav-link">Selected Works</a>
+            <a href="#material-lab" class="nav-link">3D Material Lab</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#archive" class="nav-link">Archive</a>
             <a href="#contact" class="nav-link">Contact</a>
@@ -688,6 +1366,396 @@ header.site-header {
             </div>
         </div>
     </div>
+
+    <!-- Section: 3D Material Engineering & Sensory Finish Families -->
+    <section class="material-lab-section" id="material-lab">
+        <div class="section-heading-block">
+            <div>
+                <div class="section-eyebrow">Interactive 3D Laboratory • E-Commerce UX</div>
+                <h3 class="section-title-lg">3D Finish Engineering &amp; Sensory Families</h3>
+            </div>
+            <p class="section-desc-lead">
+                In physical print, finishes reveal their luxury through dynamic light angles and tactile touch. In digital e-commerce, customers cannot touch paper. To solve this conversion barrier, I engineered 13 procedural 3D simulations in Blender calibrated to real-world optical physics.
+            </p>
+        </div>
+
+        <!-- 1. Interactive Before x After Comparator -->
+        <div class="comparator-wrapper" id="comparatorSection">
+            <div class="comparator-header-row">
+                <div>
+                    <div class="comparator-badge">Interactive Visual Proof</div>
+                    <h4 class="comparator-title">Before vs. After: Raw Paper vs. 3D Luxury Finish</h4>
+                    <p class="comparator-subtitle">
+                        Drag the slider to inspect how photorealistic 3D shaders transform standard raw couché paper into high-value finishes.
+                    </p>
+                </div>
+                <div class="comparator-mode-switch">
+                    <button class="comp-mode-btn active" id="btnModeSplit" onclick="switchComparatorMode('split')" title="Interactive split-drag slider">
+                        <span>◧</span> Split Slider
+                    </button>
+                    <button class="comp-mode-btn" id="btnModeSbs" onclick="switchComparatorMode('sbs')" title="Side-by-side synchronized comparison">
+                        <span>⇄</span> Side-by-Side
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Presets Bar -->
+            <div class="comparator-presets-scroll">
+                <span class="preset-label-tag">Select Finish to Compare:</span>
+                <button class="preset-chip active" onclick="setCompareFinish('plJPsuU1Hn8', 'Laminação Fosca & Verniz Localizado', 'Grupo B • Luz & Contraste', this)">
+                    ✨ Fosca &amp; Verniz Localizado
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('rzUCU-nwuJo', 'Hot Stamping Ouro', 'Grupo A • Reflexos Metálicos', this)">
+                    🥇 Hot Stamping Ouro
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('6D6Zw7GCORE', 'Laminação Holográfica (3D / Motion)', 'Grupo C • Texturas Táteis & Óptica', this)">
+                    🔮 Laminação Holográfica 3D
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('LhktROwmn_w', 'Laminação Soft Touch', 'Grupo C • Texturas Táteis & Óptica', this)">
+                    ☁️ Laminação Soft Touch
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('w3BTkxy_Elg', 'Hot Stamping Prata', 'Grupo A • Reflexos Metálicos', this)">
+                    🥈 Hot Stamping Prata
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('0_zA0Eifqxw', 'Hot Stamping Arco-Íris', 'Grupo A • Reflexos Metálicos', this)">
+                    🌈 Hot Stamping Arco-Íris
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('bKPGXo8S33Q', 'Hot Stamping Azul', 'Grupo A • Reflexos Metálicos', this)">
+                    💙 Hot Stamping Azul
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('KsiaBMBTgzE', 'Verniz Localizado Frente', 'Grupo B • Luz & Contraste', this)">
+                    💡 Verniz Localizado Frente
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('ARWRBKDbEuM', 'Verniz Total Brilho Frente', 'Grupo B • Luz & Contraste', this)">
+                    💎 Verniz Total Brilho
+                </button>
+            </div>
+
+            <!-- Mode 1: Split Slider View -->
+            <div class="split-slider-box" id="splitSliderStage" style="--split-pos: 50%;">
+                <!-- Base Layer: BEFORE (Sem Enobrecimento) -->
+                <div class="split-layer split-layer-before">
+                    <div class="video-frame-16x9">
+                        <iframe id="compareBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1&enablejsapi=1" title="Before: Raw Paper (Sem Enobrecimento)" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="split-pill-badge pill-before">
+                        <span class="pill-dot red"></span> BEFORE: Raw Paper (Sem Enobrecimento)
+                    </div>
+                </div>
+
+                <!-- Top Layer: AFTER (Clipped via clip-path) -->
+                <div class="split-layer split-layer-after" id="splitLayerAfter">
+                    <div class="video-frame-16x9">
+                        <iframe id="compareAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1&enablejsapi=1" title="After: 3D Finish Applied" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="split-pill-badge pill-after">
+                        <span class="pill-dot green"></span> AFTER: <span id="compareAfterLabel">Laminação Fosca &amp; Verniz Localizado</span>
+                    </div>
+                </div>
+
+                <!-- Divider Line & Handle Knob -->
+                <div class="split-divider-line" id="splitDivider">
+                    <div class="split-handle-knob" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+                        <span class="knob-drag-text">DRAG</span>
+                    </div>
+                </div>
+
+                <!-- Range Input Overlaid for Seamless Touch/Drag/Accessibility -->
+                <input type="range" min="0" max="100" value="50" class="split-range-input" id="splitRangeInput" aria-label="Compare Before and After Finish" oninput="onSplitSliderMove(this.value)">
+            </div>
+
+            <!-- Mode 2: Side-by-Side Dual View (Hidden by default) -->
+            <div class="side-by-side-grid" id="sideBySideStage" style="display: none;">
+                <div class="sbs-card">
+                    <div class="sbs-header-bar">
+                        <span class="sbs-badge sbs-before">BEFORE • Baseline Neutra</span>
+                        <h5 class="sbs-finish-title">Sem Enobrecimento (Papel Couché Puro)</h5>
+                    </div>
+                    <div class="video-frame-16x9">
+                        <iframe id="sbsBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1" title="Before Finish" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="sbs-physics-note">
+                        <strong>Optical Physics:</strong> Flat diffuse reflectance, 0% specular foil, raw paper grain under studio neutral lighting.
+                    </div>
+                </div>
+
+                <div class="sbs-card">
+                    <div class="sbs-header-bar">
+                        <span class="sbs-badge sbs-after">AFTER • 3D Shader Simulation</span>
+                        <h5 class="sbs-finish-title" id="sbsAfterTitle">Laminação Fosca &amp; Verniz Localizado</h5>
+                    </div>
+                    <div class="video-frame-16x9">
+                        <iframe id="sbsAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1" title="After Finish" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="sbs-physics-note" id="sbsAfterPhysics">
+                        <strong>Optical Physics:</strong> Multi-pass rendering in Blender: diffuse light absorption on matte base + 92% specular clearcoat varnish with alpha height emboss.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanatory Footnote -->
+            <div class="comparator-footer-insight">
+                <div class="insight-icon">💡</div>
+                <div class="insight-text">
+                    <strong>Por que a Modelagem 3D gera valor no E-Commerce?</strong> No comércio gráfico online, clientes têm receio em investir em acabamentos especiais porque fotos 2D estáticas não transmitem o brilho real. A simulação 3D em movimento elimina essa fricção e acelera a decisão de compra.
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Sensory Finish Families (Categorias Interativas) -->
+        <div class="families-container-box" id="familiesSection">
+            <div class="families-header-block">
+                <div>
+                    <div class="section-eyebrow">4 Sensory Categorization Pillars</div>
+                    <h4 class="families-headline">Divisão por Famílias de Acabamento</h4>
+                    <p class="families-subheadline">
+                        Em vez de listar tudo de uma vez, explore os 13 acabamentos organizados em 3 famílias sensoriais + 1 base de contraste:
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="family-tabs-bar" role="tablist" aria-label="Finish Families">
+                <button class="family-tab-btn active" id="tab_group_a" role="tab" aria-selected="true" onclick="selectFamily('group_a')">
+                    <span class="tab-icon">✨</span>
+                    <div class="tab-text-group">
+                        <span class="tab-main-label">Grupo A: Reflexos Metálicos</span>
+                        <span class="tab-sub-label">Hot Stamping / Foil (6 acabamentos)</span>
+                    </div>
+                    <span class="tab-counter-badge">6</span>
+                </button>
+                <button class="family-tab-btn" id="tab_group_b" role="tab" aria-selected="false" onclick="selectFamily('group_b')">
+                    <span class="tab-icon">💡</span>
+                    <div class="tab-text-group">
+                        <span class="tab-main-label">Grupo B: Luz &amp; Contraste</span>
+                        <span class="tab-sub-label">Vernizes UV (4 acabamentos)</span>
+                    </div>
+                    <span class="tab-counter-badge">4</span>
+                </button>
+                <button class="family-tab-btn" id="tab_group_c" role="tab" aria-selected="false" onclick="selectFamily('group_c')">
+                    <span class="tab-icon">🔮</span>
+                    <div class="tab-text-group">
+                        <span class="tab-main-label">Grupo C: Texturas Táteis &amp; Óptica</span>
+                        <span class="tab-sub-label">Laminações Especiais (2 acabamentos)</span>
+                    </div>
+                    <span class="tab-counter-badge">2</span>
+                </button>
+                <button class="family-tab-btn" id="tab_group_d" role="tab" aria-selected="false" onclick="selectFamily('group_d')">
+                    <span class="tab-icon">⚖️</span>
+                    <div class="tab-text-group">
+                        <span class="tab-main-label">Grupo D: Baseline Neutra</span>
+                        <span class="tab-sub-label">Antes x Depois (1 acabamento)</span>
+                    </div>
+                    <span class="tab-counter-badge">1</span>
+                </button>
+            </div>
+
+            <!-- Active Family Banner -->
+            <div class="family-focus-panel" id="familyFocusPanel">
+                <div class="focus-header-row">
+                    <div class="focus-badge-stack">
+                        <span class="focus-group-pill" id="focusGroupBadge">Grupo A: Reflexos Metálicos (Hot Stamping / Foil)</span>
+                        <span class="focus-spec-pill" id="focusCountBadge">6 Acabamentos • Física Especular</span>
+                    </div>
+                </div>
+                <h4 class="focus-title-lg" id="focusTitleText">Física do Reflexo Especular &amp; Variações Cromáticas</h4>
+                <p class="focus-desc-text" id="focusDescText">
+                    Foco na física do reflexo especular e variações de cor. Simulação da fita de foil metálica aplicada por termo-transferência industrial, renderizada no Blender com shaders PBR anisotrópicos, micro-rugosidade e órbitas de iluminação em estúdio.
+                </p>
+            </div>
+
+            <!-- Dynamic Finish Cards Grid -->
+            <div class="finishes-cards-grid" id="finishesCardsGrid">
+                <!-- Populated via JS for active family -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Finish Video Cinema Modal -->
+    <div class="modal-backdrop" id="finishCinemaModal" onclick="handleFinishModalClick(event)">
+        <div class="modal-dialog-box" role="dialog" aria-modal="true">
+            <button class="modal-close-btn" onclick="closeFinishCinemaModal()" aria-label="Close video modal">&times;</button>
+            <div class="modal-header-meta">
+                <div class="modal-project-client" id="finishCinemaGroup">3D Material Laboratory</div>
+                <h3 class="modal-project-title" id="finishCinemaTitle">Finish Title</h3>
+            </div>
+            <div class="modal-video-wrap">
+                <div class="video-frame-16x9">
+                    <iframe id="finishCinemaIframe" src="" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="modal-brief-section">
+                <h4 class="modal-section-title">Simulação Óptica &amp; Pipeline 3D</h4>
+                <p class="modal-brief-text" id="finishCinemaNotes"></p>
+                <div class="finish-cinema-actions-bar">
+                    <span class="tool-tag" id="finishCinemaTools">Blender 3D</span>
+                    <button class="btn btn-primary" onclick="loadCurrentFinishToComparator()" style="margin-left: auto;">
+                        ⇄ Comparar no Slider Antes x Depois &uarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const FINISH_FAMILIES_DATA = {"group_a": {"id": "group_a", "title": "Grupo A: Reflexos Metálicos (Hot Stamping / Foil)", "tabTitle": "Grupo A: Reflexos Metálicos", "badge": "6 Acabamentos • Física Especular", "icon": "✨", "focusTitle": "Física do Reflexo Especular & Variações Cromáticas", "focusDesc": "Foco na física do reflexo especular e variações de cor. Simulação da fita metálica aplicada por termo-transferência industrial, modelada no Blender com shaders PBR anisotrópicos, micro-rugosidade e órbitas de iluminação em estúdio para realçar os chanfros nobres.", "finishes": [{"id": "rzUCU-nwuJo", "title": "Hot Stamping Ouro", "tag": "Foil Nobre • Clássico", "notes": "Reflexão especular dourada de 24k com dispersão de luz em estúdio e relevo chanfrado.", "tools": "Blender 3D • PBR Metálico • Cycles"}, {"id": "IHY25qn-9QM", "title": "Hot Stamping Dourado", "tag": "Foil Metálico & Luxo", "notes": "Contraste nítido entre a base fosca e chanfros dourados sob rotação orbital.", "tools": "Blender 3D • Texture Mapping • Studio Rig"}, {"id": "w3BTkxy_Elg", "title": "Hot Stamping Prata", "tag": "Metal Cromado Frio", "notes": "Foil prateado espelhado com dispersão de luz fria e reflexos nítidos de borda.", "tools": "Blender 3D • Anisotropia • Studio Lighting"}, {"id": "bKPGXo8S33Q", "title": "Hot Stamping Azul", "tag": "Foil Especial Colorido", "notes": "Pigmento metálico azul saturado com microtextura reflexiva sob iluminação 3 pontos.", "tools": "Blender 3D • Custom Shader • Color Grading"}, {"id": "oO76YTZkxLA", "title": "Hot Stamping Vermelho", "tag": "Metalizado Escarlate", "notes": "Vermelho escarlate intenso calibrado para não estourar luminância em monitores sRGB.", "tools": "Blender 3D • HDR Shading • Color Science"}, {"id": "0_zA0Eifqxw", "title": "Hot Stamping Arco-Íris", "tag": "Foil Prismático Furta-Cor", "notes": "Decomposição espectral dinâmica na folha metálica conforme a câmera se movimenta.", "tools": "Blender 3D • Dispersão Cromática • Especular"}]}, "group_b": {"id": "group_b", "title": "Grupo B: Luz & Contraste (Vernizes UV)", "tabTitle": "Grupo B: Luz & Contraste", "badge": "4 Acabamentos • Profundidade e Relevo", "icon": "💡", "focusTitle": "Contraste de Brilho, Relevo Tátil & Profundidade Óptica", "focusDesc": "Foco no contraste de brilho contra superfícies e profundidade. Reprodução da resina UV com camada vitrificada e relevo tátil de máscara alpha, gerando reflexos vítreos de alto impacto que contrastam intensamente com o papel fosco.", "finishes": [{"id": "KsiaBMBTgzE", "title": "Verniz Localizado Frente", "tag": "Alto Brilho Pontual", "notes": "Destaque pontual para relevo e máscara alpha sobre o impresso, simulando 30μm de espessura.", "tools": "Blender 3D • Máscara Alpha • Specular Bump"}, {"id": "plJPsuU1Hn8", "title": "Laminação Fosca & Verniz Localizado", "tag": "O Contraste Definitivo", "notes": "O contraste definitivo fosco vs. brilho: fundo aveludado sem reflexos parasitas e verniz vítreo.", "tools": "Blender 3D • Multi-Pass • Shading Duplo"}, {"id": "ARWRBKDbEuM", "title": "Verniz Total Brilho Frente", "tag": "Acabamento Vitrificado", "notes": "Camada vitrificada homogênea cobrindo integralmente a superfície com proteção e brilho espelhado.", "tools": "Blender 3D • Clearcoat Shading • Físico"}, {"id": "9FRMrKGL0xs", "title": "Verniz Total Brilho Frente e Verso", "tag": "Proteção Integral 360°", "notes": "Cobertura vitrificada dupla em ambas as faces sob animação orbital de produto.", "tools": "Blender 3D • Animação 360° • Estúdio"}]}, "group_c": {"id": "group_c", "title": "Grupo C: Texturas Táteis & Efeitos Ópticos (Laminações Especiais)", "tabTitle": "Grupo C: Texturas & Óptica", "badge": "2 Acabamentos • Difração & Toque", "icon": "🔮", "focusTitle": "Sensação ao Toque & Difração Dinâmica da Luz", "focusDesc": "Foco na sensação ao toque e difração da luz. O Soft Touch simula a dispersão suave da luz e o toque aveludado, enquanto a Laminação Holográfica 3D simula grades de difração microscópicas que geram arco-íris dinâmicos com a movimentação da câmera.", "finishes": [{"id": "LhktROwmn_w", "title": "Laminação Soft Touch", "tag": "Toque Aveludado Peach-Skin", "notes": "Simulação do toque aveludado e dispersão suave da luz através de espalhamento difuso micro-sheen.", "tools": "Blender 3D • Subsurface Sheen • Difusão"}, {"id": "6D6Zw7GCORE", "title": "Laminação Holográfica (3D / Motion)", "tag": "Efeito Furta-Cor Dinâmico", "notes": "Efeito furta-cor dinâmico com a movimentação da câmera simulando micro-padrões difrativos.", "tools": "Blender 3D • Shader Procedural • Motion"}]}, "group_d": {"id": "group_d", "title": "Grupo D: O Contraste 'Antes x Depois' (Baseline)", "tabTitle": "Grupo D: Baseline Neutra", "badge": "Baseline Reference", "icon": "⚖️", "focusTitle": "A Base Sem Enobrecimento (Ponto Neutro de Comparação)", "focusDesc": "Papel Couché padrão sem acabamentos ópticos. Serve como o ponto zero para comparação direta no slider, comprovando o valor e o salto de qualidade proporcionado pelos acabamentos 3D.", "finishes": [{"id": "odfkaXowXO0", "title": "Sem Enobrecimento", "tag": "Papel Couché Puro", "notes": "Base natural de papel couché padrão de impressão gráfica, sem reflexos especulares ou resinas.", "tools": "Blender 3D • Base Couché • Iluminação Neutra"}]}};
+    let currentCinemaFinish = null;
+
+    // Family Selection
+    function selectFamily(groupId) {
+        document.querySelectorAll('.family-tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+        });
+        const activeBtn = document.getElementById('tab_' + groupId);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            activeBtn.setAttribute('aria-selected', 'true');
+        }
+
+        const family = FINISH_FAMILIES_DATA[groupId];
+        if (!family) return;
+
+        // Update Focus Banner
+        document.getElementById('focusGroupBadge').innerText = family.title;
+        document.getElementById('focusCountBadge').innerText = family.badge;
+        document.getElementById('focusTitleText').innerText = family.focusTitle;
+        document.getElementById('focusDescText').innerText = family.focusDesc;
+
+        // Render Finishes Grid
+        const grid = document.getElementById('finishesCardsGrid');
+        grid.innerHTML = family.finishes.map(f => `
+            <div class="finish-item-card">
+                <div class="finish-thumb-wrap">
+                    <img class="finish-thumb-img" src="https://img.youtube.com/vi/${f.id}/hqdefault.jpg" alt="${f.title}" loading="lazy">
+                    <div class="finish-thumb-overlay" onclick="openFinishCinema('${groupId}', '${f.id}')">
+                        <div class="play-circle-btn">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <span class="finish-tag-chip">${f.tag}</span>
+                </div>
+                <div class="finish-card-body">
+                    <h5 class="finish-card-title">${f.title}</h5>
+                    <p class="finish-card-notes">${f.notes}</p>
+                    <div class="finish-card-footer">
+                        <span class="tool-tag">${f.tools.split('•')[0].trim()}</span>
+                        <div class="finish-card-btns">
+                            <button class="btn-finish-compare" onclick="setCompareFinish('${f.id}', '${f.title}', '${family.title}')" title="Compare against Raw Paper in Slider">
+                                ⇄ Comparar
+                            </button>
+                            <button class="btn-finish-play" onclick="openFinishCinema('${groupId}', '${f.id}')" title="Watch HD 3D simulation">
+                                ▶ Ver 3D
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Split Slider Drag Position
+    function onSplitSliderMove(val) {
+        const stage = document.getElementById('splitSliderStage');
+        stage.style.setProperty('--split-pos', val + '%');
+    }
+
+    // Switch Comparator View Mode (Split Slider vs Side-by-Side)
+    function switchComparatorMode(mode) {
+        const splitStage = document.getElementById('splitSliderStage');
+        const sbsStage = document.getElementById('sideBySideStage');
+        const btnSplit = document.getElementById('btnModeSplit');
+        const btnSbs = document.getElementById('btnModeSbs');
+
+        if (mode === 'split') {
+            splitStage.style.display = 'block';
+            sbsStage.style.display = 'none';
+            btnSplit.classList.add('active');
+            btnSbs.classList.remove('active');
+        } else {
+            splitStage.style.display = 'none';
+            sbsStage.style.display = 'grid';
+            btnSplit.classList.remove('active');
+            btnSbs.classList.add('active');
+        }
+    }
+
+    // Set Compare Finish (Changes AFTER video in both Split & SBS)
+    function setCompareFinish(videoId, title, groupName, btnElement) {
+        // Update labels
+        document.getElementById('compareAfterLabel').innerText = title;
+        document.getElementById('sbsAfterTitle').innerText = title;
+        
+        // Update iframes
+        document.getElementById('compareAfterIframe').src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&enablejsapi=1';
+        document.getElementById('sbsAfterIframe').src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1';
+
+        // Update preset chip states
+        document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+        if (btnElement) {
+            btnElement.classList.add('active');
+        } else {
+            // Find chip matching videoId
+            document.querySelectorAll('.preset-chip').forEach(c => {
+                if (c.getAttribute('onclick') && c.getAttribute('onclick').includes(videoId)) {
+                    c.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scroll to comparator
+        const section = document.getElementById('comparatorSection');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Cinema Modal for individual finishes
+    function openFinishCinema(groupId, finishId) {
+        const family = FINISH_FAMILIES_DATA[groupId];
+        if (!family) return;
+        const finish = family.finishes.find(f => f.id === finishId);
+        if (!finish) return;
+
+        currentCinemaFinish = { ...finish, groupName: family.title };
+
+        document.getElementById('finishCinemaGroup').innerText = family.title + ' • ' + finish.tag;
+        document.getElementById('finishCinemaTitle').innerText = finish.title;
+        document.getElementById('finishCinemaNotes').innerText = finish.notes;
+        document.getElementById('finishCinemaTools').innerText = finish.tools;
+        document.getElementById('finishCinemaIframe').src = 'https://www.youtube.com/embed/' + finish.id + '?autoplay=1&rel=0';
+
+        document.getElementById('finishCinemaModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeFinishCinemaModal() {
+        const modal = document.getElementById('finishCinemaModal');
+        modal.classList.remove('active');
+        document.getElementById('finishCinemaIframe').src = '';
+        document.body.style.overflow = '';
+        currentCinemaFinish = null;
+    }
+
+    function handleFinishModalClick(e) {
+        if (e.target.id === 'finishCinemaModal') {
+            closeFinishCinemaModal();
+        }
+    }
+
+    function loadCurrentFinishToComparator() {
+        if (currentCinemaFinish) {
+            setCompareFinish(currentCinemaFinish.id, currentCinemaFinish.title, currentCinemaFinish.groupName);
+            closeFinishCinemaModal();
+        }
+    }
+
+    // Initialize Default Family on load
+    document.addEventListener('DOMContentLoaded', function() {
+        selectFamily('group_a');
+    });
+    </script>
 
     <!-- Extended Project Archive -->
     <section class="archive-accordion-wrap" id="archive">
