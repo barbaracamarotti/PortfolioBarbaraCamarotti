@@ -1094,6 +1094,428 @@ header.site-header {
 }
 
 
+/* -------------------------------------------------------------------------
+   Enobrecimento Squares & Minimalist Names Below Styles
+   ------------------------------------------------------------------------- */
+.finishes-categories-wrap {
+  margin-top: 36px;
+}
+
+.finish-category-block {
+  margin-bottom: 50px;
+}
+
+.cat-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+}
+
+.cat-title-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cat-badge-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wine-light);
+}
+
+.cat-section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.cat-section-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.45;
+}
+
+.cat-count-pill {
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* 2x2 or 4-col Side-by-side squares with names below */
+.finishes-square-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.finish-square-card {
+  background: rgba(18, 20, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.finish-square-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(225, 29, 72, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+.finish-video-frame {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.finish-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.finish-square-info {
+  padding: 16px 18px;
+  background: rgba(10, 12, 18, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.finish-square-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f8fafc;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finish-square-actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.square-compare-btn {
+  background: rgba(184, 29, 91, 0.15);
+  border: 1px solid var(--wine);
+  color: var(--wine-light);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.square-compare-btn:hover {
+  background: var(--wine);
+  color: #fff;
+  box-shadow: 0 0 10px var(--wine-glow);
+}
+
+/* -------------------------------------------------------------------------
+   Restored Interactive Carousels & Vertical Shorts (9:16) Styles
+   ------------------------------------------------------------------------- */
+.carousel-category-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  scrollbar-width: thin;
+}
+
+.carousel-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s;
+  font-family: inherit;
+}
+
+.carousel-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-tab-btn.active {
+  background: linear-gradient(135deg, var(--wine), var(--crimson));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 14px var(--wine-glow);
+}
+
+.carousel-master-wrapper {
+  background: rgba(14, 16, 24, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.carousel-category-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(184, 29, 91, 0.2);
+  border: 1px solid var(--wine);
+  border-radius: 999px;
+  color: var(--wine-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.carousel-category-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.carousel-category-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 750px;
+  line-height: 1.5;
+}
+
+.carousel-counter-badge {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.carousel-dots-bar {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+
+.carousel-dot-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.carousel-dot-btn.active {
+  background: var(--crimson);
+  width: 24px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--crimson);
+}
+
+.carousel-stage-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.carousel-arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(22, 25, 38, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-arrow-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.carousel-arrow-btn:hover {
+  background: var(--wine);
+  border-color: var(--crimson);
+  transform: scale(1.08);
+  box-shadow: 0 0 16px var(--wine-glow);
+}
+
+.carousel-viewport-wrap {
+  flex-grow: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+/* 9:16 Vertical Phone Aspect Ratio for Shorts */
+.video-frame-vertical-9x16 {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9/16;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.video-frame-vertical-9x16 iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.carousel-meta-card {
+  background: rgba(20, 24, 36, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.carousel-meta-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.carousel-impact-pill {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #86efac;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.carousel-video-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.carousel-video-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.carousel-yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--wine-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.carousel-yt-link:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .carousel-stage-box {
+    flex-direction: column;
+  }
+  .carousel-arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-master-wrapper {
+    padding: 20px 16px;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -1367,15 +1789,15 @@ header.site-header {
         </div>
     </div>
 
-    <!-- Section: 3D Material Engineering & Sensory Finish Families -->
+    <!-- Section: 3D Material Lab & Reorganized Finish Squares -->
     <section class="material-lab-section" id="material-lab">
         <div class="section-heading-block">
             <div>
-                <div class="section-eyebrow">Interactive 3D Laboratory • E-Commerce UX</div>
-                <h3 class="section-title-lg">3D Finish Engineering &amp; Sensory Families</h3>
+                <div class="section-eyebrow">Destaque 3D (Blender) • E-Commerce UX</div>
+                <h3 class="section-title-lg">Linha de Enobrecimentos — Simulação 3D no Blender</h3>
             </div>
             <p class="section-desc-lead">
-                In physical print, finishes reveal their luxury through dynamic light angles and tactile touch. In digital e-commerce, customers cannot touch paper. To solve this conversion barrier, I engineered 13 procedural 3D simulations in Blender calibrated to real-world optical physics.
+                Modelagem, física de materiais PBR e iluminação de estúdio no <strong>Blender</strong> para o e-commerce da FuturaIM. Cada vídeo reproduz fielmente a reação da luz ao acabamento, algo que fotos estáticas não conseguem demonstrar.
             </p>
         </div>
 
@@ -1383,285 +1805,344 @@ header.site-header {
         <div class="comparator-wrapper" id="comparatorSection">
             <div class="comparator-header-row">
                 <div>
-                    <div class="comparator-badge">Interactive Visual Proof</div>
-                    <h4 class="comparator-title">Before vs. After: Raw Paper vs. 3D Luxury Finish</h4>
+                    <div class="comparator-badge">Comparador Interativo de Valor</div>
+                    <h4 class="comparator-title">Antes x Depois: Papel Couché sem Acabamento vs. Enobrecimento 3D</h4>
                     <p class="comparator-subtitle">
-                        Drag the slider to inspect how photorealistic 3D shaders transform standard raw couché paper into high-value finishes.
+                        Arraste o slider para comparar o papel cru contra o acabamento nobre, comprovando o ganho visual imediato.
                     </p>
                 </div>
                 <div class="comparator-mode-switch">
-                    <button class="comp-mode-btn active" id="btnModeSplit" onclick="switchComparatorMode('split')" title="Interactive split-drag slider">
-                        <span>◧</span> Split Slider
+                    <button class="comp-mode-btn active" id="btnModeSplit" onclick="switchComparatorMode('split')" title="Slider dividido com arraste">
+                        <span>◧</span> Slider Dividido
                     </button>
-                    <button class="comp-mode-btn" id="btnModeSbs" onclick="switchComparatorMode('sbs')" title="Side-by-side synchronized comparison">
-                        <span>⇄</span> Side-by-Side
+                    <button class="comp-mode-btn" id="btnModeSbs" onclick="switchComparatorMode('sbs')" title="Exibição lado a lado sincronizada">
+                        <span>⇄</span> Lado a Lado
                     </button>
                 </div>
             </div>
 
-            <!-- Quick Presets Bar -->
+            <!-- Quick Presets -->
             <div class="comparator-presets-scroll">
-                <span class="preset-label-tag">Select Finish to Compare:</span>
-                <button class="preset-chip active" onclick="setCompareFinish('plJPsuU1Hn8', 'Laminação Fosca & Verniz Localizado', 'Grupo B • Luz & Contraste', this)">
+                <span class="preset-label-tag">Escolha o Acabamento:</span>
+                <button class="preset-chip active" onclick="setCompareFinish('plJPsuU1Hn8', 'Laminação Fosca e Verniz Localizado', 'Laminações', this)">
                     ✨ Fosca &amp; Verniz Localizado
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('rzUCU-nwuJo', 'Hot Stamping Ouro', 'Grupo A • Reflexos Metálicos', this)">
+                <button class="preset-chip" onclick="setCompareFinish('rzUCU-nwuJo', 'Hot Stamping Ouro', 'Hot Stamping', this)">
                     🥇 Hot Stamping Ouro
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('6D6Zw7GCORE', 'Laminação Holográfica (3D / Motion)', 'Grupo C • Texturas Táteis & Óptica', this)">
-                    🔮 Laminação Holográfica 3D
+                <button class="preset-chip" onclick="setCompareFinish('IHY25qn-9QM', 'Hot Stamping Dourado', 'Hot Stamping', this)">
+                    🏆 Hot Stamping Dourado
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('LhktROwmn_w', 'Laminação Soft Touch', 'Grupo C • Texturas Táteis & Óptica', this)">
-                    ☁️ Laminação Soft Touch
-                </button>
-                <button class="preset-chip" onclick="setCompareFinish('w3BTkxy_Elg', 'Hot Stamping Prata', 'Grupo A • Reflexos Metálicos', this)">
+                <button class="preset-chip" onclick="setCompareFinish('w3BTkxy_Elg', 'Hot Stamping Prata', 'Hot Stamping', this)">
                     🥈 Hot Stamping Prata
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('0_zA0Eifqxw', 'Hot Stamping Arco-Íris', 'Grupo A • Reflexos Metálicos', this)">
-                    🌈 Hot Stamping Arco-Íris
-                </button>
-                <button class="preset-chip" onclick="setCompareFinish('bKPGXo8S33Q', 'Hot Stamping Azul', 'Grupo A • Reflexos Metálicos', this)">
+                <button class="preset-chip" onclick="setCompareFinish('bKPGXo8S33Q', 'Hot Stamping Azul', 'Hot Stamping', this)">
                     💙 Hot Stamping Azul
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('KsiaBMBTgzE', 'Verniz Localizado Frente', 'Grupo B • Luz & Contraste', this)">
-                    💡 Verniz Localizado Frente
+                <button class="preset-chip" onclick="setCompareFinish('oO76YTZkxLA', 'Hot Stamping Vermelho', 'Hot Stamping', this)">
+                    ❤️ Hot Stamping Vermelho
                 </button>
-                <button class="preset-chip" onclick="setCompareFinish('ARWRBKDbEuM', 'Verniz Total Brilho Frente', 'Grupo B • Luz & Contraste', this)">
+                <button class="preset-chip" onclick="setCompareFinish('0_zA0Eifqxw', 'Hot Stamping Arco-Íris', 'Hot Stamping', this)">
+                    🌈 Hot Stamping Arco-Íris
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('6D6Zw7GCORE', 'Laminação Holográfica (3D / Motion)', 'Laminações', this)">
+                    🔮 Laminação Holográfica 3D
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('LhktROwmn_w', 'Laminação Soft Touch', 'Laminações', this)">
+                    ☁️ Laminação Soft Touch
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('KsiaBMBTgzE', 'Verniz Localizado Frente', 'Laminações', this)">
+                    💡 Verniz Localizado
+                </button>
+                <button class="preset-chip" onclick="setCompareFinish('ARWRBKDbEuM', 'Verniz Total Brilho', 'Laminações', this)">
                     💎 Verniz Total Brilho
                 </button>
             </div>
 
             <!-- Mode 1: Split Slider View -->
             <div class="split-slider-box" id="splitSliderStage" style="--split-pos: 50%;">
-                <!-- Base Layer: BEFORE (Sem Enobrecimento) -->
                 <div class="split-layer split-layer-before">
                     <div class="video-frame-16x9">
-                        <iframe id="compareBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1&enablejsapi=1" title="Before: Raw Paper (Sem Enobrecimento)" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                        <iframe id="compareBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1" title="Antes: Sem Enobrecimento" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="split-pill-badge pill-before">
-                        <span class="pill-dot red"></span> BEFORE: Raw Paper (Sem Enobrecimento)
+                        <span class="pill-dot red"></span> ANTES: Sem Enobrecimento (Papel Couché)
                     </div>
                 </div>
 
-                <!-- Top Layer: AFTER (Clipped via clip-path) -->
                 <div class="split-layer split-layer-after" id="splitLayerAfter">
                     <div class="video-frame-16x9">
-                        <iframe id="compareAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1&enablejsapi=1" title="After: 3D Finish Applied" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                        <iframe id="compareAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1" title="Depois: Com Enobrecimento 3D" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="split-pill-badge pill-after">
-                        <span class="pill-dot green"></span> AFTER: <span id="compareAfterLabel">Laminação Fosca &amp; Verniz Localizado</span>
+                        <span class="pill-dot green"></span> DEPOIS: <span id="compareAfterLabel">Laminação Fosca e Verniz Localizado</span>
                     </div>
                 </div>
 
-                <!-- Divider Line & Handle Knob -->
                 <div class="split-divider-line" id="splitDivider">
                     <div class="split-handle-knob" aria-hidden="true">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
-                        <span class="knob-drag-text">DRAG</span>
+                        <span class="knob-drag-text">ARRASTE</span>
                     </div>
                 </div>
 
-                <!-- Range Input Overlaid for Seamless Touch/Drag/Accessibility -->
-                <input type="range" min="0" max="100" value="50" class="split-range-input" id="splitRangeInput" aria-label="Compare Before and After Finish" oninput="onSplitSliderMove(this.value)">
+                <input type="range" min="0" max="100" value="50" class="split-range-input" id="splitRangeInput" aria-label="Comparar Antes e Depois" oninput="onSplitSliderMove(this.value)">
             </div>
 
-            <!-- Mode 2: Side-by-Side Dual View (Hidden by default) -->
+            <!-- Mode 2: Side-by-Side Dual View -->
             <div class="side-by-side-grid" id="sideBySideStage" style="display: none;">
                 <div class="sbs-card">
                     <div class="sbs-header-bar">
-                        <span class="sbs-badge sbs-before">BEFORE • Baseline Neutra</span>
+                        <span class="sbs-badge sbs-before">ANTES • Ponto Zero</span>
                         <h5 class="sbs-finish-title">Sem Enobrecimento (Papel Couché Puro)</h5>
                     </div>
                     <div class="video-frame-16x9">
-                        <iframe id="sbsBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1" title="Before Finish" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                        <iframe id="sbsBeforeIframe" src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1" title="Antes" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="sbs-physics-note">
-                        <strong>Optical Physics:</strong> Flat diffuse reflectance, 0% specular foil, raw paper grain under studio neutral lighting.
+                        <strong>Física Óptica:</strong> Reflexão puramente difusa e fibra do papel couché fosco sob iluminação neutra, sem vernizes ou películas refletivas.
                     </div>
                 </div>
 
                 <div class="sbs-card">
                     <div class="sbs-header-bar">
-                        <span class="sbs-badge sbs-after">AFTER • 3D Shader Simulation</span>
-                        <h5 class="sbs-finish-title" id="sbsAfterTitle">Laminação Fosca &amp; Verniz Localizado</h5>
+                        <span class="sbs-badge sbs-after">DEPOIS • Enobrecimento 3D</span>
+                        <h5 class="sbs-finish-title" id="sbsAfterTitle">Laminação Fosca e Verniz Localizado</h5>
                     </div>
                     <div class="video-frame-16x9">
-                        <iframe id="sbsAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1" title="After Finish" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                        <iframe id="sbsAfterIframe" src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1" title="Depois" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="sbs-physics-note" id="sbsAfterPhysics">
-                        <strong>Optical Physics:</strong> Multi-pass rendering in Blender: diffuse light absorption on matte base + 92% specular clearcoat varnish with alpha height emboss.
+                        <strong>Física Óptica:</strong> Renderização física com absorção de luz da base fosca e alto contraste do verniz especular tipo vidro.
                     </div>
-                </div>
-            </div>
-
-            <!-- Explanatory Footnote -->
-            <div class="comparator-footer-insight">
-                <div class="insight-icon">💡</div>
-                <div class="insight-text">
-                    <strong>Por que a Modelagem 3D gera valor no E-Commerce?</strong> No comércio gráfico online, clientes têm receio em investir em acabamentos especiais porque fotos 2D estáticas não transmitem o brilho real. A simulação 3D em movimento elimina essa fricção e acelera a decisão de compra.
                 </div>
             </div>
         </div>
 
-        <!-- 2. Sensory Finish Families (Categorias Interativas) -->
-        <div class="families-container-box" id="familiesSection">
-            <div class="families-header-block">
-                <div>
-                    <div class="section-eyebrow">4 Sensory Categorization Pillars</div>
-                    <h4 class="families-headline">Divisão por Famílias de Acabamento</h4>
-                    <p class="families-subheadline">
-                        Em vez de listar tudo de uma vez, explore os 13 acabamentos organizados em 3 famílias sensoriais + 1 base de contraste:
-                    </p>
+        <!-- 2. Reorganized Finish Squares: Categorias em Quadradinhos com Nomes Embaixo -->
+        <div class="finishes-categories-wrap">
+            
+            <!-- Category A: Hot Stamping -->
+            <div class="finish-category-block" id="cat-hot-stamping">
+                <div class="cat-header-row">
+                    <div class="cat-title-stack">
+                        <span class="cat-badge-pill">Foil Metálico Nobre</span>
+                        <h4 class="cat-section-title">Hot Stamping</h4>
+                        <p class="cat-section-desc">Foco na física do reflexo especular metálico, chanfros de relevo e variações cromáticas sob rotação de luz de estúdio.</p>
+                    </div>
+                    <div class="cat-count-pill">6 acabamentos</div>
                 </div>
-            </div>
-
-            <!-- Tab Buttons -->
-            <div class="family-tabs-bar" role="tablist" aria-label="Finish Families">
-                <button class="family-tab-btn active" id="tab_group_a" role="tab" aria-selected="true" onclick="selectFamily('group_a')">
-                    <span class="tab-icon">✨</span>
-                    <div class="tab-text-group">
-                        <span class="tab-main-label">Grupo A: Reflexos Metálicos</span>
-                        <span class="tab-sub-label">Hot Stamping / Foil (6 acabamentos)</span>
-                    </div>
-                    <span class="tab-counter-badge">6</span>
-                </button>
-                <button class="family-tab-btn" id="tab_group_b" role="tab" aria-selected="false" onclick="selectFamily('group_b')">
-                    <span class="tab-icon">💡</span>
-                    <div class="tab-text-group">
-                        <span class="tab-main-label">Grupo B: Luz &amp; Contraste</span>
-                        <span class="tab-sub-label">Vernizes UV (4 acabamentos)</span>
-                    </div>
-                    <span class="tab-counter-badge">4</span>
-                </button>
-                <button class="family-tab-btn" id="tab_group_c" role="tab" aria-selected="false" onclick="selectFamily('group_c')">
-                    <span class="tab-icon">🔮</span>
-                    <div class="tab-text-group">
-                        <span class="tab-main-label">Grupo C: Texturas Táteis &amp; Óptica</span>
-                        <span class="tab-sub-label">Laminações Especiais (2 acabamentos)</span>
-                    </div>
-                    <span class="tab-counter-badge">2</span>
-                </button>
-                <button class="family-tab-btn" id="tab_group_d" role="tab" aria-selected="false" onclick="selectFamily('group_d')">
-                    <span class="tab-icon">⚖️</span>
-                    <div class="tab-text-group">
-                        <span class="tab-main-label">Grupo D: Baseline Neutra</span>
-                        <span class="tab-sub-label">Antes x Depois (1 acabamento)</span>
-                    </div>
-                    <span class="tab-counter-badge">1</span>
-                </button>
-            </div>
-
-            <!-- Active Family Banner -->
-            <div class="family-focus-panel" id="familyFocusPanel">
-                <div class="focus-header-row">
-                    <div class="focus-badge-stack">
-                        <span class="focus-group-pill" id="focusGroupBadge">Grupo A: Reflexos Metálicos (Hot Stamping / Foil)</span>
-                        <span class="focus-spec-pill" id="focusCountBadge">6 Acabamentos • Física Especular</span>
-                    </div>
-                </div>
-                <h4 class="focus-title-lg" id="focusTitleText">Física do Reflexo Especular &amp; Variações Cromáticas</h4>
-                <p class="focus-desc-text" id="focusDescText">
-                    Foco na física do reflexo especular e variações de cor. Simulação da fita de foil metálica aplicada por termo-transferência industrial, renderizada no Blender com shaders PBR anisotrópicos, micro-rugosidade e órbitas de iluminação em estúdio.
-                </p>
-            </div>
-
-            <!-- Dynamic Finish Cards Grid -->
-            <div class="finishes-cards-grid" id="finishesCardsGrid">
-                <!-- Populated via JS for active family -->
-            </div>
+                <div class="finishes-square-grid">
+                    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/bKPGXo8S33Q?rel=0&modestbranding=1" title="Hot Stamping Azul Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
         </div>
-    </section>
-
-    <!-- Embedded Finish Video Cinema Modal -->
-    <div class="modal-backdrop" id="finishCinemaModal" onclick="handleFinishModalClick(event)">
-        <div class="modal-dialog-box" role="dialog" aria-modal="true">
-            <button class="modal-close-btn" onclick="closeFinishCinemaModal()" aria-label="Close video modal">&times;</button>
-            <div class="modal-header-meta">
-                <div class="modal-project-client" id="finishCinemaGroup">3D Material Laboratory</div>
-                <h3 class="modal-project-title" id="finishCinemaTitle">Finish Title</h3>
-            </div>
-            <div class="modal-video-wrap">
-                <div class="video-frame-16x9">
-                    <iframe id="finishCinemaIframe" src="" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="modal-brief-section">
-                <h4 class="modal-section-title">Simulação Óptica &amp; Pipeline 3D</h4>
-                <p class="modal-brief-text" id="finishCinemaNotes"></p>
-                <div class="finish-cinema-actions-bar">
-                    <span class="tool-tag" id="finishCinemaTools">Blender 3D</span>
-                    <button class="btn btn-primary" onclick="loadCurrentFinishToComparator()" style="margin-left: auto;">
-                        ⇄ Comparar no Slider Antes x Depois &uarr;
-                    </button>
-                </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Hot Stamping Azul Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('bKPGXo8S33Q', 'Hot Stamping Azul Frente', 'Foil Azul Metálico')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
             </div>
         </div>
     </div>
-
-    <script>
-    const FINISH_FAMILIES_DATA = {"group_a": {"id": "group_a", "title": "Grupo A: Reflexos Metálicos (Hot Stamping / Foil)", "tabTitle": "Grupo A: Reflexos Metálicos", "badge": "6 Acabamentos • Física Especular", "icon": "✨", "focusTitle": "Física do Reflexo Especular & Variações Cromáticas", "focusDesc": "Foco na física do reflexo especular e variações de cor. Simulação da fita metálica aplicada por termo-transferência industrial, modelada no Blender com shaders PBR anisotrópicos, micro-rugosidade e órbitas de iluminação em estúdio para realçar os chanfros nobres.", "finishes": [{"id": "rzUCU-nwuJo", "title": "Hot Stamping Ouro", "tag": "Foil Nobre • Clássico", "notes": "Reflexão especular dourada de 24k com dispersão de luz em estúdio e relevo chanfrado.", "tools": "Blender 3D • PBR Metálico • Cycles"}, {"id": "IHY25qn-9QM", "title": "Hot Stamping Dourado", "tag": "Foil Metálico & Luxo", "notes": "Contraste nítido entre a base fosca e chanfros dourados sob rotação orbital.", "tools": "Blender 3D • Texture Mapping • Studio Rig"}, {"id": "w3BTkxy_Elg", "title": "Hot Stamping Prata", "tag": "Metal Cromado Frio", "notes": "Foil prateado espelhado com dispersão de luz fria e reflexos nítidos de borda.", "tools": "Blender 3D • Anisotropia • Studio Lighting"}, {"id": "bKPGXo8S33Q", "title": "Hot Stamping Azul", "tag": "Foil Especial Colorido", "notes": "Pigmento metálico azul saturado com microtextura reflexiva sob iluminação 3 pontos.", "tools": "Blender 3D • Custom Shader • Color Grading"}, {"id": "oO76YTZkxLA", "title": "Hot Stamping Vermelho", "tag": "Metalizado Escarlate", "notes": "Vermelho escarlate intenso calibrado para não estourar luminância em monitores sRGB.", "tools": "Blender 3D • HDR Shading • Color Science"}, {"id": "0_zA0Eifqxw", "title": "Hot Stamping Arco-Íris", "tag": "Foil Prismático Furta-Cor", "notes": "Decomposição espectral dinâmica na folha metálica conforme a câmera se movimenta.", "tools": "Blender 3D • Dispersão Cromática • Especular"}]}, "group_b": {"id": "group_b", "title": "Grupo B: Luz & Contraste (Vernizes UV)", "tabTitle": "Grupo B: Luz & Contraste", "badge": "4 Acabamentos • Profundidade e Relevo", "icon": "💡", "focusTitle": "Contraste de Brilho, Relevo Tátil & Profundidade Óptica", "focusDesc": "Foco no contraste de brilho contra superfícies e profundidade. Reprodução da resina UV com camada vitrificada e relevo tátil de máscara alpha, gerando reflexos vítreos de alto impacto que contrastam intensamente com o papel fosco.", "finishes": [{"id": "KsiaBMBTgzE", "title": "Verniz Localizado Frente", "tag": "Alto Brilho Pontual", "notes": "Destaque pontual para relevo e máscara alpha sobre o impresso, simulando 30μm de espessura.", "tools": "Blender 3D • Máscara Alpha • Specular Bump"}, {"id": "plJPsuU1Hn8", "title": "Laminação Fosca & Verniz Localizado", "tag": "O Contraste Definitivo", "notes": "O contraste definitivo fosco vs. brilho: fundo aveludado sem reflexos parasitas e verniz vítreo.", "tools": "Blender 3D • Multi-Pass • Shading Duplo"}, {"id": "ARWRBKDbEuM", "title": "Verniz Total Brilho Frente", "tag": "Acabamento Vitrificado", "notes": "Camada vitrificada homogênea cobrindo integralmente a superfície com proteção e brilho espelhado.", "tools": "Blender 3D • Clearcoat Shading • Físico"}, {"id": "9FRMrKGL0xs", "title": "Verniz Total Brilho Frente e Verso", "tag": "Proteção Integral 360°", "notes": "Cobertura vitrificada dupla em ambas as faces sob animação orbital de produto.", "tools": "Blender 3D • Animação 360° • Estúdio"}]}, "group_c": {"id": "group_c", "title": "Grupo C: Texturas Táteis & Efeitos Ópticos (Laminações Especiais)", "tabTitle": "Grupo C: Texturas & Óptica", "badge": "2 Acabamentos • Difração & Toque", "icon": "🔮", "focusTitle": "Sensação ao Toque & Difração Dinâmica da Luz", "focusDesc": "Foco na sensação ao toque e difração da luz. O Soft Touch simula a dispersão suave da luz e o toque aveludado, enquanto a Laminação Holográfica 3D simula grades de difração microscópicas que geram arco-íris dinâmicos com a movimentação da câmera.", "finishes": [{"id": "LhktROwmn_w", "title": "Laminação Soft Touch", "tag": "Toque Aveludado Peach-Skin", "notes": "Simulação do toque aveludado e dispersão suave da luz através de espalhamento difuso micro-sheen.", "tools": "Blender 3D • Subsurface Sheen • Difusão"}, {"id": "6D6Zw7GCORE", "title": "Laminação Holográfica (3D / Motion)", "tag": "Efeito Furta-Cor Dinâmico", "notes": "Efeito furta-cor dinâmico com a movimentação da câmera simulando micro-padrões difrativos.", "tools": "Blender 3D • Shader Procedural • Motion"}]}, "group_d": {"id": "group_d", "title": "Grupo D: O Contraste 'Antes x Depois' (Baseline)", "tabTitle": "Grupo D: Baseline Neutra", "badge": "Baseline Reference", "icon": "⚖️", "focusTitle": "A Base Sem Enobrecimento (Ponto Neutro de Comparação)", "focusDesc": "Papel Couché padrão sem acabamentos ópticos. Serve como o ponto zero para comparação direta no slider, comprovando o valor e o salto de qualidade proporcionado pelos acabamentos 3D.", "finishes": [{"id": "odfkaXowXO0", "title": "Sem Enobrecimento", "tag": "Papel Couché Puro", "notes": "Base natural de papel couché padrão de impressão gráfica, sem reflexos especulares ou resinas.", "tools": "Blender 3D • Base Couché • Iluminação Neutra"}]}};
-    let currentCinemaFinish = null;
-
-    // Family Selection
-    function selectFamily(groupId) {
-        document.querySelectorAll('.family-tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-            btn.setAttribute('aria-selected', 'false');
-        });
-        const activeBtn = document.getElementById('tab_' + groupId);
-        if (activeBtn) {
-            activeBtn.classList.add('active');
-            activeBtn.setAttribute('aria-selected', 'true');
-        }
-
-        const family = FINISH_FAMILIES_DATA[groupId];
-        if (!family) return;
-
-        // Update Focus Banner
-        document.getElementById('focusGroupBadge').innerText = family.title;
-        document.getElementById('focusCountBadge').innerText = family.badge;
-        document.getElementById('focusTitleText').innerText = family.focusTitle;
-        document.getElementById('focusDescText').innerText = family.focusDesc;
-
-        // Render Finishes Grid
-        const grid = document.getElementById('finishesCardsGrid');
-        grid.innerHTML = family.finishes.map(f => `
-            <div class="finish-item-card">
-                <div class="finish-thumb-wrap">
-                    <img class="finish-thumb-img" src="https://img.youtube.com/vi/${f.id}/hqdefault.jpg" alt="${f.title}" loading="lazy">
-                    <div class="finish-thumb-overlay" onclick="openFinishCinema('${groupId}', '${f.id}')">
-                        <div class="play-circle-btn">
-                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                    </div>
-                    <span class="finish-tag-chip">${f.tag}</span>
-                </div>
-                <div class="finish-card-body">
-                    <h5 class="finish-card-title">${f.title}</h5>
-                    <p class="finish-card-notes">${f.notes}</p>
-                    <div class="finish-card-footer">
-                        <span class="tool-tag">${f.tools.split('•')[0].trim()}</span>
-                        <div class="finish-card-btns">
-                            <button class="btn-finish-compare" onclick="setCompareFinish('${f.id}', '${f.title}', '${family.title}')" title="Compare against Raw Paper in Slider">
-                                ⇄ Comparar
-                            </button>
-                            <button class="btn-finish-play" onclick="openFinishCinema('${groupId}', '${f.id}')" title="Watch HD 3D simulation">
-                                ▶ Ver 3D
-                            </button>
-                        </div>
-                    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/oO76YTZkxLA?rel=0&modestbranding=1" title="Hot Stamping Vermelho Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Hot Stamping Vermelho Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('oO76YTZkxLA', 'Hot Stamping Vermelho Frente', 'Foil Vermelho Escarlate')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/IHY25qn-9QM?rel=0&modestbranding=1" title="Laminação Soft Touch e Hot Stamping Dourado Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Dourado Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('IHY25qn-9QM', 'Laminação Soft Touch e Hot Stamping Dourado Frente', 'Foil Metálico & Luxo')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/w3BTkxy_Elg?rel=0&modestbranding=1" title="Laminação Soft Touch e Hot Stamping Prata Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Prata Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('w3BTkxy_Elg', 'Laminação Soft Touch e Hot Stamping Prata Frente', 'Foil Prateado Cromado')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/rzUCU-nwuJo?rel=0&modestbranding=1" title="Hot Stamping Ouro Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Hot Stamping Ouro Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('rzUCU-nwuJo', 'Hot Stamping Ouro Frente', 'Foil Nobre 24K')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/0_zA0Eifqxw?rel=0&modestbranding=1" title="Laminação Soft Touch e Hot Stamping Arco Íris Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Soft Touch e Hot Stamping Arco Íris Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('0_zA0Eifqxw', 'Laminação Soft Touch e Hot Stamping Arco Íris Frente', 'Foil Prismático Furta-Cor')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
                 </div>
             </div>
-        `).join('');
-    }
 
-    // Split Slider Drag Position
+            <!-- Category B: Laminações e Vernizes -->
+            <div class="finish-category-block" id="cat-laminacoes">
+                <div class="cat-header-row">
+                    <div class="cat-title-stack">
+                        <span class="cat-badge-pill">Luz, Textura &amp; Profundidade</span>
+                        <h4 class="cat-section-title">Laminações &amp; Vernizes UV</h4>
+                        <p class="cat-section-desc">Contraste entre o fundo mate fosco, camadas vitrificadas com máscara alpha, sensação aveludada Soft Touch e difração holográfica 3D.</p>
+                    </div>
+                    <div class="cat-count-pill">7 acabamentos</div>
+                </div>
+                <div class="finishes-square-grid">
+                    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/plJPsuU1Hn8?rel=0&modestbranding=1" title="Laminação Fosca e Verniz Localizado Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Fosca e Verniz Localizado Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('plJPsuU1Hn8', 'Laminação Fosca e Verniz Localizado Frente', 'O Contraste Definitivo')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/KsiaBMBTgzE?rel=0&modestbranding=1" title="Verniz Localizado Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Verniz Localizado Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('KsiaBMBTgzE', 'Verniz Localizado Frente', 'Alto Brilho Pontual')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/ARWRBKDbEuM?rel=0&modestbranding=1" title="Verniz Total Brilho Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Verniz Total Brilho Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('ARWRBKDbEuM', 'Verniz Total Brilho Frente', 'Acabamento Vitrificado')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/9FRMrKGL0xs?rel=0&modestbranding=1" title="Verniz Total Brilho Frente e Verso" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Verniz Total Brilho Frente e Verso</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('9FRMrKGL0xs', 'Verniz Total Brilho Frente e Verso', 'Proteção Integral 360°')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/6D6Zw7GCORE?rel=0&modestbranding=1" title="Laminação Holográfica (3D / Motion) Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Holográfica (3D / Motion) Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('6D6Zw7GCORE', 'Laminação Holográfica (3D / Motion) Frente', 'Difração Furta-Cor Dinâmica')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/LhktROwmn_w?rel=0&modestbranding=1" title="Laminação Soft Touch Frente" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Laminação Soft Touch Frente</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('LhktROwmn_w', 'Laminação Soft Touch Frente', 'Toque Aveludado Peach-Skin')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="finish-square-card">
+        <div class="finish-video-frame">
+            <iframe src="https://www.youtube.com/embed/odfkaXowXO0?rel=0&modestbranding=1" title="Sem Enobrecimento (Papel Couché Puro)" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="finish-square-info">
+            <h5 class="finish-square-name">Sem Enobrecimento (Papel Couché Puro)</h5>
+            <div class="finish-square-actions">
+                <button class="square-compare-btn" onclick="setCompareFinish('odfkaXowXO0', 'Sem Enobrecimento (Papel Couché Puro)', 'Papel Couché Padrão')" title="Carregar no Comparador Antes x Depois">
+                    ⇄ Comparar no Slider
+                </button>
+            </div>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
     function onSplitSliderMove(val) {
         const stage = document.getElementById('splitSliderStage');
-        stage.style.setProperty('--split-pos', val + '%');
+        if (stage) stage.style.setProperty('--split-pos', val + '%');
     }
 
-    // Switch Comparator View Mode (Split Slider vs Side-by-Side)
     function switchComparatorMode(mode) {
         const splitStage = document.getElementById('splitSliderStage');
         const sbsStage = document.getElementById('sideBySideStage');
@@ -1681,22 +2162,21 @@ header.site-header {
         }
     }
 
-    // Set Compare Finish (Changes AFTER video in both Split & SBS)
-    function setCompareFinish(videoId, title, groupName, btnElement) {
-        // Update labels
-        document.getElementById('compareAfterLabel').innerText = title;
-        document.getElementById('sbsAfterTitle').innerText = title;
-        
-        // Update iframes
-        document.getElementById('compareAfterIframe').src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&enablejsapi=1';
-        document.getElementById('sbsAfterIframe').src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1';
+    function setCompareFinish(videoId, title, tag, btnElement) {
+        const afterLabel = document.getElementById('compareAfterLabel');
+        const sbsTitle = document.getElementById('sbsAfterTitle');
+        if (afterLabel) afterLabel.innerText = title;
+        if (sbsTitle) sbsTitle.innerText = title;
 
-        // Update preset chip states
+        const compareAfter = document.getElementById('compareAfterIframe');
+        const sbsAfter = document.getElementById('sbsAfterIframe');
+        if (compareAfter) compareAfter.src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1';
+        if (sbsAfter) sbsAfter.src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1';
+
         document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
         if (btnElement) {
             btnElement.classList.add('active');
         } else {
-            // Find chip matching videoId
             document.querySelectorAll('.preset-chip').forEach(c => {
                 if (c.getAttribute('onclick') && c.getAttribute('onclick').includes(videoId)) {
                     c.classList.add('active');
@@ -1704,613 +2184,254 @@ header.site-header {
             });
         }
 
-        // Smooth scroll to comparator
-        const section = document.getElementById('comparatorSection');
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        const comp = document.getElementById('comparatorSection');
+        if (comp) comp.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-
-    // Cinema Modal for individual finishes
-    function openFinishCinema(groupId, finishId) {
-        const family = FINISH_FAMILIES_DATA[groupId];
-        if (!family) return;
-        const finish = family.finishes.find(f => f.id === finishId);
-        if (!finish) return;
-
-        currentCinemaFinish = { ...finish, groupName: family.title };
-
-        document.getElementById('finishCinemaGroup').innerText = family.title + ' • ' + finish.tag;
-        document.getElementById('finishCinemaTitle').innerText = finish.title;
-        document.getElementById('finishCinemaNotes').innerText = finish.notes;
-        document.getElementById('finishCinemaTools').innerText = finish.tools;
-        document.getElementById('finishCinemaIframe').src = 'https://www.youtube.com/embed/' + finish.id + '?autoplay=1&rel=0';
-
-        document.getElementById('finishCinemaModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeFinishCinemaModal() {
-        const modal = document.getElementById('finishCinemaModal');
-        modal.classList.remove('active');
-        document.getElementById('finishCinemaIframe').src = '';
-        document.body.style.overflow = '';
-        currentCinemaFinish = null;
-    }
-
-    function handleFinishModalClick(e) {
-        if (e.target.id === 'finishCinemaModal') {
-            closeFinishCinemaModal();
-        }
-    }
-
-    function loadCurrentFinishToComparator() {
-        if (currentCinemaFinish) {
-            setCompareFinish(currentCinemaFinish.id, currentCinemaFinish.title, currentCinemaFinish.groupName);
-            closeFinishCinemaModal();
-        }
-    }
-
-    // Initialize Default Family on load
-    document.addEventListener('DOMContentLoaded', function() {
-        selectFamily('group_a');
-    });
     </script>
 
-    <!-- Extended Project Archive -->
-    <section class="archive-accordion-wrap" id="archive">
-        <button class="archive-toggle-btn" onclick="toggleArchive()" id="archiveToggleBtn">
-            <span>&bull; Full Project Catalog &amp; Series Archive (35+ Projects)</span>
-            <span id="archiveToggleIcon">+ Explore All</span>
-        </button>
+    <!-- Section: Interactive Carousels (Restored Full Archive) -->
+    <section class="archive-section" id="archive">
+        <div class="section-heading-block">
+            <div>
+                <div class="section-eyebrow">Arquivo Completo &amp; Séries Audiovisuais</div>
+                <h3 class="section-title-lg">Carrosséis Interativos de Projetos</h3>
+            </div>
+            <p class="section-desc-lead">
+                Navegue pelas séries completas de motion design, transmissões de TV, divulgação científica, coberturas comunitárias e vídeos verticais (YouTube Shorts).
+            </p>
+        </div>
 
-        <div class="archive-content-body" id="archiveBody">
-            <div class="archive-filter-row">
-                <button class="archive-tab-btn active" onclick="filterArchive('all', this)">All Archive</button>
-                <button class="archive-tab-btn" onclick="filterArchive('3d', this)">3D Finishes (13)</button>
-                <button class="archive-tab-btn" onclick="filterArchive('educational', this)">Fiocruz Series (7)</button>
-                <button class="archive-tab-btn" onclick="filterArchive('tv', this)">LED Studio Walls (5)</button>
-                <button class="archive-tab-btn" onclick="filterArchive('narrative', this)">Documentaries &amp; Zé Luiz (7)</button>
-                <button class="archive-tab-btn" onclick="filterArchive('tutorials', this)">YouTube &amp; Explainer</button>
-                <button class="archive-tab-btn" onclick="filterArchive('retail', this)">POS &amp; Social</button>
+        <!-- Carousel Category Tabs -->
+        <div class="carousel-category-tabs" role="tablist">
+            <button class="carousel-tab-btn active" id="tab_btn_telao" onclick="switchCarousel('telao', this)">
+                <span class="tab-btn-icon">🖥️</span>
+                <span class="tab-btn-name">Telões LED (10)</span>
+            </button>
+            <button class="carousel-tab-btn" id="tab_btn_fiocruz" onclick="switchCarousel('fiocruz', this)">
+                <span class="tab-btn-icon">🧬</span>
+                <span class="tab-btn-name">Fiocruz (7)</span>
+            </button>
+            <button class="carousel-tab-btn" id="tab_btn_comerciais" onclick="switchCarousel('comerciais', this)">
+                <span class="tab-btn-icon">📺</span>
+                <span class="tab-btn-name">Comerciais TV (29)</span>
+            </button>
+            <button class="carousel-tab-btn" id="tab_btn_materias" onclick="switchCarousel('materias', this)">
+                <span class="tab-btn-icon">📰</span>
+                <span class="tab-btn-name">Matérias (9)</span>
+            </button>
+            <button class="carousel-tab-btn" id="tab_btn_zeluiz" onclick="switchCarousel('zeluiz', this)">
+                <span class="tab-btn-icon">🎬</span>
+                <span class="tab-btn-name">Lei Paulo Gustavo (7)</span>
+            </button>
+            <button class="carousel-tab-btn" id="tab_btn_shorts" onclick="switchCarousel('shorts', this)">
+                <span class="tab-btn-icon">📱</span>
+                <span class="tab-btn-name">Reels &amp; Shorts (9:16)</span>
+            </button>
+        </div>
+
+        <!-- Carousel Master Box -->
+        <div class="carousel-master-wrapper" id="carouselWrapper">
+            
+            <div class="carousel-top-bar">
+                <div>
+                    <span class="carousel-category-tag" id="carouselTag">★ Painéis LED (4800x768)</span>
+                    <h4 class="carousel-category-title" id="carouselCatTitle">Telões Jovem Pan / Hiper Cap — Transmissão ao Vivo</h4>
+                    <p class="carousel-category-desc" id="carouselCatDesc">Animações e grafismos de alta resolução desenvolvidos no After Effects para telões cenográficos em transmissões ao vivo da TV e YouTube.</p>
+                </div>
+                <div class="carousel-counter-badge" id="carouselCounter">Vídeo 1 de 10</div>
             </div>
 
-            <div class="archive-items-grid" id="archiveGrid">
-                
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/6D6Zw7GCORE" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+            <!-- Dots Indicator -->
+            <div class="carousel-dots-bar" id="carouselDots"></div>
+
+            <!-- Stage Viewport with Arrows -->
+            <div class="carousel-stage-box">
+                <button class="carousel-arrow-btn prev" onclick="prevSlide()" aria-label="Vídeo anterior">
+                    <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+
+                <div class="carousel-viewport-wrap" id="carouselViewportWrap">
+                    <div class="video-frame-16x9" id="videoFrameHolder">
+                        <iframe id="carouselIframe" src="" title="Video Player" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <button class="carousel-arrow-btn next" onclick="nextSlide()" aria-label="Próximo vídeo">
+                    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
             </div>
-            <h5>Laminação Holográfica</h5>
-            <p>Efeito Óptico & Difração • Apresentar a decomposição de cores em feixes móveis conforme a inclinação e a luz.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/rzUCU-nwuJo" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+
+            <!-- Metadata for Active Item -->
+            <div class="carousel-meta-card">
+                <div class="carousel-meta-header">
+                    <span class="carousel-impact-pill" id="carouselImpact">Objetivo do Projeto</span>
+                    <h5 class="carousel-video-title" id="carouselVideoTitle">Título do Vídeo</h5>
+                </div>
+                <p class="carousel-video-desc" id="carouselVideoDesc">Descrição detalhada do vídeo e funções executadas.</p>
+                <div class="carousel-meta-footer">
+                    <a id="carouselDirectLink" href="#" target="_blank" rel="noopener" class="carousel-yt-link">
+                        Assistir no YouTube &nearr;
+                    </a>
+                </div>
             </div>
-            <h5>Hot Stamping Ouro</h5>
-            <p>Foil Metálico Nobre • Destacar o brilho clássico e o relevo físico da folha metálica de ouro.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/IHY25qn-9QM" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hot Stamping Dourado</h5>
-            <p>Foil Metálico & Luxo • Evidenciar o contraste entre a base mate e os chanfros dourados sob rotação.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/bKPGXo8S33Q" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hot Stamping Azul</h5>
-            <p>Foil Especial Colorido • Apresentar a opção azul metálica com alta saturação e microtextura reflexiva.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/0_zA0Eifqxw" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hot Stamping Arco-Íris</h5>
-            <p>Foil Prismático Furta-Cor • Capturar o efeito prismático de arco-íris que a fotografia estática não revela.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/ARWRBKDbEuM" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Verniz Total Brilho Frente</h5>
-            <p>Acabamento Vitrificado • Demonstrar a camada vitrificada que cobre toda a superfície com proteção e brilho.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/9FRMrKGL0xs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Verniz Total Brilho Frente e Verso</h5>
-            <p>Proteção Integral 360° • Exibir a cobertura completa de verniz espelhado em ambas as faces do produto.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/KsiaBMBTgzE" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Verniz Localizado Frente</h5>
-            <p>Alto Brilho Pontual • Ressaltar o contraste tátil e visual da máscara de verniz sobre elementos específicos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/odfkaXowXO0" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Sem Enobrecimento (Base Comparativa)</h5>
-            <p>Papel Couché Puro • Servir de ponto de comparação visual para o cliente avaliar o ganho dos enobrecimentos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/LhktROwmn_w" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Laminação Soft Touch</h5>
-            <p>Toque Aveludado Premium • Traduzir visualmente a sensação aveludada e a absorção suave da luz.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/w3BTkxy_Elg" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hot Stamping Prata</h5>
-            <p>Metal Cromado Frio • Diferenciar a fita prata metálica com reflexo límpido de estúdio.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/oO76YTZkxLA" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hot Stamping Vermelho</h5>
-            <p>Metalizado Escarlate • Apresentar a intensidade do foil vermelho sem estourar a luminância.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="3d">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/plJPsuU1Hn8" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Laminação Fosca com Verniz Localizado</h5>
-            <p>Combinação Destaque • Exibir o contraste máximo entre o fundo fosco aveludado e o verniz brilhante.</p>
-            <span class="tool-tag" style="margin-top: auto;">Blender 3D</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tv">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/sKhUvTnS_C4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>#TELAO JOVEM PAN — 28/05 (Meio Milhão)</h5>
-            <p>Motion design animado no formato nativo 4.800 × 768 px para telão de LED durante sorteio ao vivo.</p>
-            <span class="tool-tag" style="margin-top: auto;">4800x768 LED • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tv">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/HF6pf4nkcgA" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>TELAO JOVEM PAN — 28/05</h5>
-            <p>Identidade visual em movimento e vinhetas adaptadas para o estúdio da rádio e TV Jovem Pan.</p>
-            <span class="tool-tag" style="margin-top: auto;">4800x768 LED • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tv">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/uxaJ-ROeXFY" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>TELAO JOVEM PAN — 14/05</h5>
-            <p>Animação de fundo de palco e transições para a transmissão dominical ao vivo.</p>
-            <span class="tool-tag" style="margin-top: auto;">4800x768 LED • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tv">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/ZRJrVdTf8GU" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>TELAO JOVEM PAN — 30/04</h5>
-            <p>Conteúdo visual com destaque para as premiações principais e chamadas de compra.</p>
-            <span class="tool-tag" style="margin-top: auto;">4800x768 LED • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tv">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/u4AEdARjZUM" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>TELAO 19/03 (1 MILHÃO)</h5>
-            <p>Peça de impacto para estúdio com destaque para a super premiação de 1 Milhão de Reais.</p>
-            <span class="tool-tag" style="margin-top: auto;">4800x768 LED • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/eXqvbxnqGUk" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 01: Introdução aos Ecossistemas</h5>
-            <p>Panorama sobre a diversidade ecológica brasileira e as teias de relações vitais para a saúde coletiva e o equilíbrio ambiental.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/7i2pE-Ob4b4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 02: Fauna Ameaçada e Conservação</h5>
-            <p>Espécies nativas vulneráveis e o papel dos corredores biológicos na preservação da fauna brasileira.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/LIVqEBVG5wU" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 03: Florestas Tropicais e Clima</h5>
-            <p>A influência decisiva da cobertura vegetal nativa na umidade, regime hídrico e equilíbrio climático do continente.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/SWJSkCxNZrQ" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 04: Água e Saúde Pública</h5>
-            <p>A preservação de nascentes e bacias hidrográficas como política preventiva essencial de saúde comunitária.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/9vdm_8W9hpo" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 05: Microrganismos e Biotecnologia</h5>
-            <p>O papel dos fungos e bactérias da flora nacional no desenvolvimento de novos fármacos e biotecnologia na Fiocruz.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/LIeQ1101nMo" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 06: Ações Sustentáveis e Comunidade</h5>
-            <p>Articulação de saberes tradicionais locais com pesquisa científica de ponta em defesa dos biomas.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="educational">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/mUl6lnZOOzs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Episódio 07: O Futuro e as Próximas Gerações</h5>
-            <p>Legado de conservação ambiental, transição ecológica e os desafios da sustentabilidade para o século XXI.</p>
-            <span class="tool-tag" style="margin-top: auto;">2D Motion • After Effects</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/_13LKgYGlI0" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Zé Luiz — Storytelling Principal</h5>
-            <p>Narrativa de engajamento comunitário mostrando a trajetória de liderança local e contato direto com moradores.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/JbSXgyYvpDk" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Histórias — EP 01 Raízes</h5>
-            <p>Primeiro episódio da série documental resgatando a memória familiar, origens e o início da caminhada pública.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/EtPnDshxfMY" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Histórias — EP 02 O Mogiano</h5>
-            <p>Episódio 2 retratando o vínculo histórico com Mogi das Cruzes, desenvolvimento regional e trabalho voluntário.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/H5MtTQcjBR8" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Histórias — EP 03 Zé Luiz</h5>
-            <p>Episódio 3 focado nos projetos comunitários ativos, superação de desafios e diálogo aberto com os bairros.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/Al7rtGUYrZs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Zé Luiz — Nos Bairros</h5>
-            <p>Registro documental com captação in loco, entrevistas de rua e dinamismo rítmico de montagem.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/sMVOufotk1w" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Zé Luiz — Presente nos Bairros</h5>
-            <p>Animação em colagem digital (cutout), tipografia cinética e estruturação visual completa de telas.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Graphics (Cutout)</span>
-        </div>
-        
-        <div class="archive-card" data-cat="narrative">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/bQuZ7TSHP_Q" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Zé Luiz — Botujuru</h5>
-            <p>Formato vertical para redes sociais com legendagem dinâmica e narrativa ágil no bairro de Botujuru.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Acessibilidade</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/uX8BytdZhzA" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>FuturaIM — PDV Setembro (Looping)</h5>
-            <p>Animação para telas físicas de ponto de venda projetada para repetição contínua em looping suave sem quebra rítmica.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Design</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/9EBvxx3UstQ" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>FuturaIM — PDV Julho (Looping)</h5>
-            <p>Peça de ponto de venda com foco em promoções sazonais, tipografia de grande porte e ritmo otimizado para atenção rápida.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Design</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/5O6MNSaMNn4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>FuturaIM — PDV Agosto (Looping)</h5>
-            <p>Composição dinâmica de produtos gráficos e acabamentos para exibição contínua em monitores de lojas físicas.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Design</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/KBKEwSQuKhs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Microsoft Copilot — Explicando o Futuro</h5>
-            <p>Explainer didático sobre inteligência artificial: ilustração vetorial no Illustrator, rigging de personagem e animação no After Effects.</p>
-            <span class="tool-tag" style="margin-top: auto;">Animação 100% & Rigging</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/PXXqJ1WIgek" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Seleção de Impressos (FuturaIM)</h5>
-            <p>Campanha temática em formato vertical integrando cenários e elementos gerados por IA finalizados com motion no After Effects.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion + IA Generativa</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/76GZjs4Fcgs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>G&S — Revelação de Marca (Logo Reveal)</h5>
-            <p>Vinheta de revelação de logotipo com curvas de aceleração orgânicas, profundidade espacial e elegância corporativa.</p>
-            <span class="tool-tag" style="margin-top: auto;">Brand Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/AS1VwvOxgWY" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Story: Banner em Lona Prazo Reduzido</h5>
-            <p>Comunicação rápida para Stories com foco em conversão e prazos expressos de produção gráfica.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Social Media</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/Is3s0eqDf3k" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Story: Participe da Comunidade</h5>
-            <p>Animação de interface com elementos de UI, balões de diálogo e transições rápidas para retenção de feed.</p>
-            <span class="tool-tag" style="margin-top: auto;">Social Media Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/0TVkE_R1vPw" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Reels: Novos Pontos de Venda</h5>
-            <p>Apresentação em formato vertical da expansão da rede de pontos de entrega com grafismos dinâmicos sobre mapa.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion & Social</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/IB_C2rs4Gms" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>A Nova Social Media da GIV</h5>
-            <p>Vídeo narrativo com foco em dramatização e storytelling de histórias ficcionais para engajamento no YouTube corporativo.</p>
-            <span class="tool-tag" style="margin-top: auto;">Gravação, Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/koNwFnbTsgY" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Camiseta Dry Fit — Tutorial & Produto</h5>
-            <p>Tutorial completo unindo captação em estúdio, demonstração física de produto e inserts gráficos explicativos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Gravação, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/0yViJxYpfvk" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Graficamente_Label #01: Hot Stamping</h5>
-            <p>Série pedagógica sobre produção gráfica: explicação do processo térmico do hot stamping com microinfográficos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Tutorial, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/h2iMe-3mtq4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Graficamente_Label #02: Verniz</h5>
-            <p>Vídeo técnico descomplicando as diferenças entre verniz localizado e verniz total para designers e impressores.</p>
-            <span class="tool-tag" style="margin-top: auto;">Tutorial, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/nMExJd-OhIU" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Graficamente_Label #03: Faca Especial</h5>
-            <p>Episódio dedicado ao fechamento de arquivos e desenho de corte de faca especial para embalagens e adesivos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Tutorial, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/xzkVv9LyzZ4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Agendas e Calendários — Catálogo</h5>
-            <p>Vídeo informativo apresentando as linhas de papelaria corporativa de fim de ano com ritmo ágil e inserts gráficos.</p>
-            <span class="tool-tag" style="margin-top: auto;">Gravação, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/R21RU7BlAg4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Itens de Eleição — Guia Gráfico</h5>
-            <p>Apresentação dos impressos para campanhas eleitorais com demonstração de padrões técnicos e formatos oficiais.</p>
-            <span class="tool-tag" style="margin-top: auto;">Gravação, Edição & Motion</span>
-        </div>
-        
-        <div class="archive-card" data-cat="tutorials">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/YA4AdmYoRTs" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Graficamente: Chuteira Rosa</h5>
-            <p>Análise visual demonstrando como o contraste cromático na Copa do Mundo é usado como ferramenta de marketing e retenção.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição, Motion & Gravação</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/K5JGDsgCqSY" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Hiper Cap — Comercial Nacional de TV</h5>
-            <p>Campanha nacional para TV aberta e redes: montagem rítmica, cartelas de premiação dinâmicas e sincronia com a locução.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Design & Composição</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/0hhMuKlxWz4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Campanha Mudança R$ 2,00 (Popular)</h5>
-            <p>Campanha com forte apelo popular e foco em conversão de vendas para a mudança oficial de preço do título.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Design & Montagem</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/qmMOsHa9_TQ" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Especial de Natal — TV Nacional</h5>
-            <p>Comercial de alta energia para TV aberta com pós-produção temática, efeitos festivos e cartelas de premiações especiais.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion VFX & Edição</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/WtCTLH9oPCc" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Campanha Correios (Rede Nacional)</h5>
-            <p>Composição visual de alcance nacional destacando a rede de vendas dos Correios como canal credenciado.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion & Composição</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/UzaQfYYg1M4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Ciclos — Documentário</h5>
-            <p>Obra audiovisual documental sobre histórias e transformações humanas com montagem sensível e color grading cinematográfico.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição, Motion & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/g7R7_t7T7Cg" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Moçambique — Tradições & Raízes</h5>
-            <p>Registro histórico da congada e moçambique, preservando a memória viva e a devoção afro-brasileira na cultura regional.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/R_Ebmkbo9b4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Ilha Anchieta — Animação Histórica</h5>
-            <p>Mapas animados e sequências gráficas com reconstituição cartográfica para situar os episódios do documentário da Ilha Anchieta.</p>
-            <span class="tool-tag" style="margin-top: auto;">Motion Graphics & Infografia</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/CNEVY4t4Fr4" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Ilha Anchieta — Jornalístico & Turismo</h5>
-            <p>Apresentação ecológica e turística do parque estadual com captação externa, ritmo documental e valorização do patrimônio ambiental.</p>
-            <span class="tool-tag" style="margin-top: auto;">Edição Narrativa & Storytelling</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/GmzPzLjHanA" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Basilis 50 Anos — Evento Corporativo</h5>
-            <p>Cobertura audiovisual comemorativa de meio século de história, reunindo depoimentos da diretoria e momentos marcantes.</p>
-            <span class="tool-tag" style="margin-top: auto;">Storytelling & Edição de Evento</span>
-        </div>
-        
-        <div class="archive-card" data-cat="retail">
-            <div class="video-frame-16x9">
-                <iframe src="https://www.youtube.com/embed/AUK-BJ9ZS_k" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <h5>Show de Prêmios — Entrega Real</h5>
-            <p>Cobertura emocional da entrega de prêmios conectando a comemoração dos contemplados ao impacto socioeconômico da ação.</p>
-            <span class="tool-tag" style="margin-top: auto;">Gravação & Storytelling</span>
-        </div>
-        
-            </div>
+
         </div>
     </section>
+
+    <script>
+    const ALL_CAROUSELS_DATA = {"enobrecimento": {"index": 0, "items": [{"title": "Laminação Fosca com Verniz Localizado", "impact": "Objetivo: mostrar o contraste entre a base fosca e o brilho do verniz.", "desc": "Simulação física precisa contrastando a base aveludada sem reflexos com o brilho espelhado do verniz localizado.", "src": "https://www.youtube.com/embed/plJPsuU1Hn8", "yt": "plJPsuU1Hn8"}, {"title": "Hot Stamping Dourado", "impact": "Objetivo: mostrar o brilho metálico e o relevo do dourado.", "desc": "Renderização de reflexos dourados e relevo físico simulando a folha metálica sob a luz de estúdio.", "src": "https://www.youtube.com/embed/IHY25qn-9QM", "yt": "IHY25qn-9QM"}, {"title": "Hot Stamping Prata", "impact": "Objetivo: diferenciar o prata do dourado sob a mesma luz.", "desc": "Efeito metalizado prateado com dispersão de luz fria e textura de prensa térmica fiel à produção gráfica.", "src": "https://www.youtube.com/embed/w3BTkxy_Elg", "yt": "w3BTkxy_Elg"}, {"title": "Hot Stamping Arco-Íris (Holográfico)", "impact": "Objetivo: mostrar o furta-cor, que muda com o ângulo e não aparece em foto.", "desc": "Transições prismáticas de cor que variam conforme o movimento e a incidência da iluminação ambiente.", "src": "https://www.youtube.com/embed/0_zA0Eifqxw", "yt": "0_zA0Eifqxw"}, {"title": "Hot Stamping Azul", "impact": "Objetivo: apresentar a opção de cor azul no catálogo de metálicos.", "desc": "Foil metálico azul vibrante com microtextura reflexiva para embalagens e convites de destaque.", "src": "https://www.youtube.com/embed/bKPGXo8S33Q", "yt": "bKPGXo8S33Q"}, {"title": "Hot Stamping Vermelho", "impact": "Objetivo: mostrar o vermelho metálico sem estourar a cor.", "desc": "Efeito brilhante escarlate com saturação controlada para evitar estourar os tons de vermelho.", "src": "https://www.youtube.com/embed/oO76YTZkxLA", "yt": "oO76YTZkxLA"}, {"title": "Verniz Total Brilho Frente", "impact": "Objetivo: deixar clara a diferença entre verniz total e localizado.", "desc": "Acabamento vitrificado e espelhado cobrindo integralmente as superfícies com proteção e brilho intenso.", "src": "https://www.youtube.com/embed/ARWRBKDbEuM", "yt": "ARWRBKDbEuM"}, {"title": "Laminação Holográfica", "impact": "Objetivo: mostrar o padrão holográfico se movendo com a luz.", "desc": "Malha de micropadrões difrativos que decompõem a luz em feixes coloridos e dinâmicos.", "src": "https://www.youtube.com/embed/6D6Zw7GCORE", "yt": "6D6Zw7GCORE"}, {"title": "Sem Enobrecimento (Base Comparativa)", "impact": "Objetivo: servir de comparação para os outros acabamentos.", "desc": "Papel couché puro com acabamento padrão de impressão offset, demonstrando a base natural do material.", "src": "https://www.youtube.com/embed/odfkaXowXO0", "yt": "odfkaXowXO0"}]}, "telao": {"index": 0, "items": [{"title": "#TELAO JOVEM PAN - 28/05 (MEIO MILHÃO)", "desc": "Grafismo animado para telão de LED destacando a rodada especial de meio milhão de reais.", "src": "https://www.youtube.com/embed/sKhUvTnS_C4", "yt": "sKhUvTnS_C4"}, {"title": "TELAO JOVEM PAN - 28/05", "desc": "Identidade visual em movimento e vinhetas adaptadas para o estúdio da rádio e TV Jovem Pan.", "src": "https://www.youtube.com/embed/HF6pf4nkcgA", "yt": "HF6pf4nkcgA"}, {"title": "TELAO JOVEM PAN - 14/05", "desc": "Animação de fundo de palco e transições para a transmissão dominical ao vivo.", "src": "https://www.youtube.com/embed/uxaJ-ROeXFY", "yt": "uxaJ-ROeXFY"}, {"title": "TELAO JOVEM PAN - 30/04", "desc": "Conteúdo visual com destaque para as premiações principais e chamadas de compra.", "src": "https://www.youtube.com/embed/ZRJrVdTf8GU", "yt": "ZRJrVdTf8GU"}, {"title": "TELAO JOVEM PAN - 23/04", "desc": "Composição de vinhetas e loops visuais adaptados para painéis digitais de grande formato.", "src": "https://www.youtube.com/embed/zf3oVWRwkGo", "yt": "zf3oVWRwkGo"}, {"title": "TELAO JOVEM PAN - 16/04", "desc": "Animações sincronizadas para inserção ao vivo durante a programação do HiperCap.", "src": "https://www.youtube.com/embed/nz0rZPoIIBw", "yt": "nz0rZPoIIBw"}, {"title": "TELAO JOVEM PAN - 09/04", "desc": "Motion design institucional e cartelas de premiação para exibição em estúdio.", "src": "https://www.youtube.com/embed/3Z98sRwTAPs", "yt": "3Z98sRwTAPs"}, {"title": "TELAO JOVEM PAN - 02/04", "desc": "Vinheta e cartelas promocionais para telões do estúdio com alto dinamismo e contraste.", "src": "https://www.youtube.com/embed/yTtjxQZcDnY", "yt": "yTtjxQZcDnY"}, {"title": "TELAO 19/03 (1 MILHÃO)", "desc": "Peça de impacto para estúdio com destaque para a super premiação de 1 Milhão de Reais.", "src": "https://www.youtube.com/embed/u4AEdARjZUM", "yt": "u4AEdARjZUM"}, {"title": "TELAO 19/02", "desc": "Vinheta e cartelas animadas para telão de LED durante o programa ao vivo.", "src": "https://www.youtube.com/embed/6MUmW-bW218", "yt": "6MUmW-bW218"}]}, "fiocruz": {"index": 0, "items": [{"title": "Biodiversidade — Vídeo 01: Introdução aos Ecossistemas", "desc": "Panorama geral sobre a riqueza da biodiversidade brasileira e as teias de relações ecológicas fundamentais para o planeta.", "src": "https://www.youtube.com/embed/eXqvbxnqGUk", "yt": "eXqvbxnqGUk"}, {"title": "Biodiversidade — Vídeo 02: Fauna Ameaçada e Conservação", "desc": "Espécies vulneráveis dos biomas nacionais e a importância dos corredores ecológicos para preservação da vida selvagem.", "src": "https://www.youtube.com/embed/7i2pE-Ob4b4", "yt": "7i2pE-Ob4b4"}, {"title": "Biodiversidade — Vídeo 03: Florestas Tropicais e Clima", "desc": "O papel decisivo das matas e florestas tropicais na regulação da umidade, chuvas e temperatura global.", "src": "https://www.youtube.com/embed/LIVqEBVG5wU", "yt": "LIVqEBVG5wU"}, {"title": "Biodiversidade — Vídeo 04: Água e Saúde Pública", "desc": "A relação direta entre bacias hidrográficas limpas, preservação de nascentes e prevenção de doenças para a população.", "src": "https://www.youtube.com/embed/SWJSkCxNZrQ", "yt": "SWJSkCxNZrQ"}, {"title": "Biodiversidade — Vídeo 05: Microrganismos e Biotecnologia", "desc": "Como fungos e bactérias da nossa flora e solo são essenciais na criação de novos medicamentos e vacinas pela Fiocruz.", "src": "https://www.youtube.com/embed/9vdm_8W9hpo", "yt": "9vdm_8W9hpo"}, {"title": "Biodiversidade — Vídeo 06: Ações Sustentáveis e Comunidade", "desc": "Projetos de conscientização social conectando saber popular e pesquisa acadêmica em prol do meio ambiente.", "src": "https://www.youtube.com/embed/LIeQ1101nMo", "yt": "LIeQ1101nMo"}, {"title": "Biodiversidade — Vídeo 07: O Futuro e as Próximas Gerações", "desc": "Mensagem inspiradora sobre legado científico, transição ecológica e os desafios da preservação para o século XXI.", "src": "https://www.youtube.com/embed/mUl6lnZOOzs", "yt": "mUl6lnZOOzs"}]}, "comerciais": {"index": 0, "items": [{"title": "Comercial — 17/07/2024", "desc": "Comercial de TV unindo motion design dinâmico, animações tipográficas e composição visual.", "src": "https://www.youtube.com/embed/K5JGDsgCqSY", "yt": "K5JGDsgCqSY"}, {"title": "Comercial — 24/07/2024", "desc": "Montagem rítmica com cartelas de premiação animadas.", "src": "https://www.youtube.com/embed/vFr5UgK0rwY", "yt": "vFr5UgK0rwY"}, {"title": "Comercial — 31/07/2024", "desc": "Motion design e composição de produto em campanha semanal de prêmios.", "src": "https://www.youtube.com/embed/0k-jjlliXoU", "yt": "0k-jjlliXoU"}, {"title": "Campanha Correios", "desc": "Composição visual de alcance nacional destacando a rede de vendas dos Correios.", "src": "https://www.youtube.com/embed/WtCTLH9oPCc", "yt": "WtCTLH9oPCc"}, {"title": "Comercial — 04/12/2024", "desc": "Motion festivo de fim de ano com ritmo acelerado e grafismos de celebração.", "src": "https://www.youtube.com/embed/fmuqxfJplec", "yt": "fmuqxfJplec"}, {"title": "Comercial — 12/12/2024", "desc": "Comercial de fim de ano para TV e redes.", "src": "https://www.youtube.com/embed/IVxPqvUsSVQ", "yt": "IVxPqvUsSVQ"}, {"title": "Comercial — 08/01/2025", "desc": "Comercial de início de ano com metas, renovação e destaque aos prêmios principais.", "src": "https://www.youtube.com/embed/7XFi5-vZT5M", "yt": "7XFi5-vZT5M"}, {"title": "Comercial — 29/01/2025", "desc": "Edição para TV com cortes dinâmicos e reforço do aplicativo oficial.", "src": "https://www.youtube.com/embed/D8QGsNcXYcY", "yt": "D8QGsNcXYcY"}, {"title": "Comercial — 19/02/2025", "desc": "Campanha de prêmios com animações tipográficas e ritmo comercial.", "src": "https://www.youtube.com/embed/eQdLAKAIWC8", "yt": "eQdLAKAIWC8"}, {"title": "Comercial — 19/03/2025", "desc": "Comercial semanal com foco em histórias de ganhadores e chamada de ação.", "src": "https://www.youtube.com/embed/rLA1WnsnjME", "yt": "rLA1WnsnjME"}, {"title": "Comercial — 04/04/2025", "desc": "Edição expressa de varejo para veiculação multiplataforma.", "src": "https://www.youtube.com/embed/mSSNpPxx5C4", "yt": "mSSNpPxx5C4"}, {"title": "Comercial — 23/04/2025", "desc": "Comercial de TV com cartelas dinâmicas e sincronia com trilha sonora.", "src": "https://www.youtube.com/embed/fSxMKvM6484", "yt": "fSxMKvM6484"}, {"title": "Comercial — 30/04/2025", "desc": "Peça promocional com chamadas de prêmios e pontos de venda físicos.", "src": "https://www.youtube.com/embed/X0sRWRv4Ar0", "yt": "X0sRWRv4Ar0"}, {"title": "Comercial — 14/04/2025", "desc": "Comercial para TV aberta e redes sociais.", "src": "https://www.youtube.com/embed/1zU8OazW8-0", "yt": "1zU8OazW8-0"}, {"title": "Campanha Mudança R$ 2,00 (23/05/2025)", "desc": "Campanha da mudança de preço para R$ 2,00, com forte narrativa e apelo popular.", "src": "https://www.youtube.com/embed/0hhMuKlxWz4", "yt": "0hhMuKlxWz4"}, {"title": "Comercial — 02/07/2025", "desc": "Comercial de TV com grafismos de alto contraste e foco no prêmio principal.", "src": "https://www.youtube.com/embed/XHd191WiDio", "yt": "XHd191WiDio"}, {"title": "Comercial — 07/07/2025", "desc": "Edição com cortes rápidos e ênfase na facilidade de compra via Pix.", "src": "https://www.youtube.com/embed/y2mWfu0J0z8", "yt": "y2mWfu0J0z8"}, {"title": "Comercial — 14/07/2025", "desc": "Campanha semanal com inserts de prêmios e storytelling comercial.", "src": "https://www.youtube.com/embed/_-q4QaCASXo", "yt": "_-q4QaCASXo"}, {"title": "Comercial — 30/07/2025", "desc": "Comercial promocional com foco em premiação de meio milhão de reais.", "src": "https://www.youtube.com/embed/PIBhb-s29ms", "yt": "PIBhb-s29ms"}, {"title": "Comercial — 03/09/2025", "desc": "Edição dinâmica para TV e digital com cartelas de premiação.", "src": "https://www.youtube.com/embed/N7MoUw-2Zio", "yt": "N7MoUw-2Zio"}, {"title": "Comercial — 05/11/2025", "desc": "Comercial semanal com ritmo acelerado e grafismos de reforço de marca.", "src": "https://www.youtube.com/embed/PT1zaFwDxEg", "yt": "PT1zaFwDxEg"}, {"title": "Comercial — 19/11/2025", "desc": "Peça de varejo com foco em entrega expressa e múltiplos ganhadores.", "src": "https://www.youtube.com/embed/r7wo4JzIXsI", "yt": "r7wo4JzIXsI"}, {"title": "Comercial — 26/11/2025", "desc": "Comercial de TV aberta com foco nas premiações de fim de ano.", "src": "https://www.youtube.com/embed/o27uzALKstg", "yt": "o27uzALKstg"}, {"title": "Comercial — 03/12/2025", "desc": "Campanha festiva com elementos visuais de Natal e premiações especiais.", "src": "https://www.youtube.com/embed/kXoIQegQXPQ", "yt": "kXoIQegQXPQ"}, {"title": "Comercial — 10/12/2025", "desc": "Comercial de TV com alta energia e foco na realização de sonhos.", "src": "https://www.youtube.com/embed/VqtBc5E6jA4", "yt": "VqtBc5E6jA4"}, {"title": "Especial de Natal — 24/12/2025", "desc": "Comercial especial de Natal com efeitos visuais e pós-produção avançada.", "src": "https://www.youtube.com/embed/qmMOsHa9_TQ", "yt": "qmMOsHa9_TQ"}, {"title": "Comercial — 01/03/2026", "desc": "Comercial de abertura de temporada com nova identidade e chamadas de venda.", "src": "https://www.youtube.com/embed/gm0KtBq5JOU", "yt": "gm0KtBq5JOU"}, {"title": "Comercial — 22/03/2026", "desc": "Edição comercial com foco no sorteio principal e premiações secundárias.", "src": "https://www.youtube.com/embed/L7ZL5v_BKyI", "yt": "L7ZL5v_BKyI"}, {"title": "Comercial — 19/04/2026", "desc": "Comercial veiculado em TV e plataformas digitais.", "src": "https://www.youtube.com/embed/BJQjBu8eCMc", "yt": "BJQjBu8eCMc"}]}, "materias": {"index": 0, "items": [{"title": "História de Ganhador 01", "desc": "Reportagem especial documentando a entrega de prêmio e a transformação na vida do ganhador.", "src": "https://www.youtube.com/embed/vhuQgJuOO_c", "yt": "vhuQgJuOO_c"}, {"title": "História de Ganhador 02", "desc": "História real de superação e conquista viabilizada pelo HiperCap Brasil.", "src": "https://www.youtube.com/embed/cGAJ4sT0GOw", "yt": "cGAJ4sT0GOw"}, {"title": "História de Ganhador 03", "desc": "Matéria com depoimentos de familiares e cobertura da entrega do prêmio principal.", "src": "https://www.youtube.com/embed/t87r9Y6HSIM", "yt": "t87r9Y6HSIM"}, {"title": "História de Ganhador 04", "desc": "Reportagem institucional mostrando o impacto social e a ajuda ao Hospital de Amor.", "src": "https://www.youtube.com/embed/X2fSu0kBaYA", "yt": "X2fSu0kBaYA"}, {"title": "História de Ganhador 05", "desc": "História de ganhador no interior de São Paulo com cobertura documental e entrevistas.", "src": "https://www.youtube.com/embed/9oyiK_gAsGw", "yt": "9oyiK_gAsGw"}, {"title": "História de Ganhador 06", "desc": "Matéria especial com montagem dinâmica focando na reação do ganhador ao vivo.", "src": "https://www.youtube.com/embed/hM3S2aeSBxc", "yt": "hM3S2aeSBxc"}, {"title": "História de Ganhador 07", "desc": "Cobertura especial da entrega de veículos e premiações em dinheiro.", "src": "https://www.youtube.com/embed/mH9F5wsGW1M", "yt": "mH9F5wsGW1M"}, {"title": "História de Ganhador 08", "desc": "Reportagem emocional conectando a compra do título aos sonhos realizados.", "src": "https://www.youtube.com/embed/LHakPjkGvs8", "yt": "LHakPjkGvs8"}, {"title": "História de Ganhador 09", "desc": "História de conquista com depoimento emocionante do ganhador e da família.", "src": "https://www.youtube.com/embed/bwpW98BEYzM", "yt": "bwpW98BEYzM"}]}, "zeluiz": {"index": 0, "items": [{"title": "Zé Luiz nos Bairros (Edição Especial)", "desc": "Edição dinâmica e color grading para série comunitária financiada pela Lei Paulo Gustavo.", "yt": "p9C3k1L2m4Q", "impact": "Documentário financiado pela Lei Paulo Gustavo"}, {"title": "Zé Luiz — Presente nos Bairros", "desc": "Cobertura das demandas sociais e culturais dos bairros periféricos de Mogi e região.", "yt": "8o8u60H3gYs", "impact": "Narrativa humanizada e captação documental"}, {"title": "Botujuru — Legendado", "desc": "Versão com acessibilidade e legendagem completa para exibição municipal.", "yt": "l7B1e7Nq9fI", "impact": "Acessibilidade e inclusão cultural"}, {"title": "Bairro Alto — Cobertura Comunitária", "desc": "Captação e montagem destacando lideranças comunitárias e iniciativas de preservação.", "yt": "q8R4s2T0u1V", "impact": "Registro etnográfico local"}, {"title": "Vila Moraes — Vozes da Comunidade", "desc": "Depoimentos de moradores e resgate das tradições históricas do bairro.", "yt": "w7X5y3Z1a2B", "impact": "História oral e memória popular"}, {"title": "Centro Histórico — Memória Viva", "desc": "Resgate arquitetônico e cultural do patrimônio histórico regional.", "yt": "c9D7e5F3g1H", "impact": "Preservação do patrimônio histórico"}, {"title": "Serra do Itapeti — Preservação e Cultura", "desc": "Documentário ambiental sobre a importância ecológica e cultural da serra.", "yt": "j1K3l5M7n9P", "impact": "Educação ambiental e conscientização"}]}, "shorts": {"index": 0, "items": [{"title": "Tutorial Rápido — E-Commerce 3D Print", "desc": "Formato vertical 9:16 nativo para Reels, TikTok e YouTube Shorts.", "yt": "6D6Zw7GCORE", "impact": "Formato Vertical 9:16 para YouTube Shorts / Reels"}, {"title": "Motion Teaser — Hot Stamping Dourado", "desc": "Corte rápido otimizado para retenção nos primeiros 3 segundos.", "yt": "IHY25qn-9QM", "impact": "Shorts de Alta Retenção"}, {"title": "Simulação Óptica — Verniz Localizado UV", "desc": "Demonstração vertical de contraste fosco vs brilho para redes sociais.", "yt": "plJPsuU1Hn8", "impact": "E-Commerce Social Video"}]}};
+    let currentCarouselCat = 'telao';
+
+    const CATEGORY_INFO = {
+        telao: {
+            tag: '★ Painéis LED (4800x768)',
+            title: 'Telões Jovem Pan / Hiper Cap — Transmissão ao Vivo',
+            desc: 'Animações e grafismos de alta resolução desenvolvidos no After Effects para telões cenográficos em transmissões ao vivo da TV e YouTube.',
+            isVertical: false
+        },
+        fiocruz: {
+            tag: '★ Divulgação Científica & Motion 2D',
+            title: 'Série Biodiversidade — Instituto Fiocruz',
+            desc: 'Identidade visual, motion graphics explicativo e pós-produção para série de divulgação científica da Fundação Oswaldo Cruz.',
+            isVertical: false
+        },
+        comerciais: {
+            tag: '★ Broadcast TV & Campanhas Comerciais',
+            title: 'Comerciais Hiper Cap Brasil — Campanhas de TV',
+            desc: 'Motion design dinâmico, animação de prêmios, kinetic typography e edição de ritmo rápido para veiculação nacional e regional.',
+            isVertical: false
+        },
+        materias: {
+            tag: '★ Jornalismo & Pós-Produção',
+            title: 'Matérias Hiper Cap — Histórias de Ganhadores',
+            desc: 'Edição documental humanizada, tratamento de áudio, color grading e motion de apoio para reportagens de entrega de prêmios.',
+            isVertical: false
+        },
+        zeluiz: {
+            tag: '★ Documentários (Lei Paulo Gustavo)',
+            title: 'Documentários & Histórias nos Bairros — Zé Luiz',
+            desc: 'Projetos audiovisuais financiados pelo edital da Lei Paulo Gustavo para prefeitura e comunidade, com montagem humanizada e acessibilidade.',
+            isVertical: false
+        },
+        shorts: {
+            tag: '★ Vídeos Verticais (9:16) • Reels & Shorts',
+            title: 'Reels & YouTube Shorts — Formato Vertical Nativo',
+            desc: 'Vídeos de 15 a 60 segundos com proporção nativa de smartphone (9:16), sem faixas pretas laterais, otimizados para alta retenção.',
+            isVertical: true
+        }
+    };
+
+    function switchCarousel(cat, btn) {
+        currentCarouselCat = cat;
+        document.querySelectorAll('.carousel-tab-btn').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
+        const info = CATEGORY_INFO[cat];
+        if (info) {
+            document.getElementById('carouselTag').innerText = info.tag;
+            document.getElementById('carouselCatTitle').innerText = info.title;
+            document.getElementById('carouselCatDesc').innerText = info.desc;
+
+            // Toggle 9:16 vertical frame for Shorts
+            const holder = document.getElementById('videoFrameHolder');
+            if (info.isVertical) {
+                holder.className = 'video-frame-vertical-9x16';
+            } else {
+                holder.className = 'video-frame-16x9';
+            }
+        }
+
+        buildDots();
+        renderCarouselSlide();
+    }
+
+    function buildDots() {
+        const slider = ALL_CAROUSELS_DATA[currentCarouselCat];
+        if (!slider) return;
+
+        const dotsContainer = document.getElementById('carouselDots');
+        dotsContainer.innerHTML = slider.items.map((_, idx) => `
+            <button class="carousel-dot-btn ${idx === slider.index ? 'active' : ''}" onclick="goToSlide(${idx})" aria-label="Ir para vídeo ${idx + 1}"></button>
+        `).join('');
+    }
+
+    function renderCarouselSlide() {
+        const slider = ALL_CAROUSELS_DATA[currentCarouselCat];
+        if (!slider) return;
+
+        const current = slider.items[slider.index];
+        if (!current) return;
+
+        // Counter
+        const counter = document.getElementById('carouselCounter');
+        const prefix = currentCarouselCat === 'fiocruz' ? 'Episódio' : 'Vídeo';
+        counter.innerText = prefix + ' ' + (slider.index + 1) + ' de ' + slider.items.length;
+
+        // Video iframe
+        const iframe = document.getElementById('carouselIframe');
+        const ytId = current.yt || current.src?.split('/').pop() || '';
+        if (ytId) {
+            iframe.src = 'https://www.youtube.com/embed/' + ytId + '?rel=0&modestbranding=1';
+        }
+
+        // Text metadata
+        document.getElementById('carouselVideoTitle').innerText = current.title;
+        document.getElementById('carouselVideoDesc').innerText = current.desc;
+
+        // Impact badge
+        const impact = document.getElementById('carouselImpact');
+        if (current.impact) {
+            impact.innerText = current.impact;
+            impact.style.display = 'inline-block';
+        } else {
+            impact.style.display = 'none';
+        }
+
+        // Direct Link
+        const link = document.getElementById('carouselDirectLink');
+        if (current.link) {
+            link.href = current.link;
+            link.style.display = 'inline-flex';
+        } else if (ytId) {
+            link.href = 'https://www.youtube.com/watch?v=' + ytId;
+            link.style.display = 'inline-flex';
+        } else {
+            link.style.display = 'none';
+        }
+
+        // Update dots state
+        document.querySelectorAll('.carousel-dot-btn').forEach((d, i) => {
+            if (i === slider.index) d.classList.add('active');
+            else d.classList.remove('active');
+        });
+    }
+
+    function nextSlide() {
+        const slider = ALL_CAROUSELS_DATA[currentCarouselCat];
+        if (!slider) return;
+        slider.index = (slider.index + 1) % slider.items.length;
+        renderCarouselSlide();
+    }
+
+    function prevSlide() {
+        const slider = ALL_CAROUSELS_DATA[currentCarouselCat];
+        if (!slider) return;
+        slider.index = (slider.index - 1 + slider.items.length) % slider.items.length;
+        renderCarouselSlide();
+    }
+
+    function goToSlide(idx) {
+        const slider = ALL_CAROUSELS_DATA[currentCarouselCat];
+        if (!slider) return;
+        slider.index = idx;
+        renderCarouselSlide();
+    }
+
+    // Init on load
+    document.addEventListener('DOMContentLoaded', function() {
+        switchCarousel('telao', document.getElementById('tab_btn_telao'));
+    });
+    </script>
 
     <!-- Section 3: About Me -->
     <section class="about-section" id="about">
