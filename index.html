@@ -258,7 +258,7 @@ header.site-header {
 
 .modal-dialog-box {
   background: #10121a; border: 1px solid rgba(184, 29, 91, 0.4);
-  border-radius: 20px; max-width: 960px; width: 100%; max-height: 90vh;
+  border-radius: 20px; max-width: 1080px; width: 100%; max-height: 90vh;
   overflow-y: auto; box-shadow: 0 28px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(184, 29, 91, 0.25);
   position: relative; padding: 32px;
 }
@@ -1761,6 +1761,35 @@ header.site-header {
 }
 
 
+.teaser-expand-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+  background: rgba(9, 10, 15, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.teaser-expand-btn:hover {
+  background: var(--wine);
+  border-color: var(--crimson);
+  box-shadow: 0 0 12px var(--wine-glow);
+  transform: scale(1.05);
+}
+
+
     </style>
 </head>
 <body>
@@ -1863,6 +1892,9 @@ header.site-header {
                     <div class="teaser-hint-badge">
                         <span>◂ ARRASTE PARA COMPARAR ▸</span>
                     </div>
+                    <button class="teaser-expand-btn" onclick="openCaseStudy('futuraim_3d'); event.stopPropagation();" title="Abrir Estudo e Comparador">
+                        <span>⛶</span> Abrir Laboratório Completo
+                    </button>
                 </div>
 
                 <div class="project-info-body" onclick="openCaseStudy('futuraim_3d')">
@@ -2990,8 +3022,22 @@ function openCaseStudy(projectId) {
     document.getElementById('modalTools').innerText = project.tools.join(', ');
     document.getElementById('modalYear').innerText = project.year + ' • ' + project.tag;
 
-    // Video iframe
-    document.getElementById('modalIframe').src = 'https://www.youtube.com/embed/' + project.videoId + '?autoplay=1&rel=0';
+    const stdWrap = document.getElementById('standardModalVideoWrap');
+    const labWrap = document.getElementById('futuraimDedicatedLab');
+
+    if (projectId === 'futuraim_3d') {
+        if (stdWrap) stdWrap.style.display = 'none';
+        if (labWrap) labWrap.style.display = 'block';
+        if (typeof syncModalVideos === 'function') syncModalVideos();
+        const vL = document.getElementById('modalVidLeft');
+        const vR = document.getElementById('modalVidRight');
+        if (vL) { vL.currentTime = 0; vL.play().catch(() => {}); }
+        if (vR) { vR.currentTime = 0; vR.play().catch(() => {}); }
+    } else {
+        if (stdWrap) stdWrap.style.display = 'block';
+        if (labWrap) labWrap.style.display = 'none';
+        document.getElementById('modalIframe').src = 'https://www.youtube.com/embed/' + project.videoId + '?autoplay=1&rel=0';
+    }
 
     // Overview paragraphs
     const overviewContainer = document.getElementById('modalOverviewText');
@@ -3013,7 +3059,12 @@ function openCaseStudy(projectId) {
 function closeCaseStudy() {
     const modal = document.getElementById('caseModal');
     modal.classList.remove('active');
-    document.getElementById('modalIframe').src = '';
+    const ifr = document.getElementById('modalIframe');
+    if (ifr) ifr.src = '';
+    const vL = document.getElementById('modalVidLeft');
+    const vR = document.getElementById('modalVidRight');
+    if (vL) vL.pause();
+    if (vR) vR.pause();
     document.body.style.overflow = '';
 }
 
