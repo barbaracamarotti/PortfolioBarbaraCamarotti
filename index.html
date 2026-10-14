@@ -2217,12 +2217,8 @@
 
     @media (max-width: 768px) {
       .carousel-stage-box {
-        flex-direction: column;
-      }
-
-      .carousel-arrow-btn {
-        width: 40px;
-        height: 40px;
+        display: block;
+        margin-bottom: 0;
       }
 
       .carousel-master-wrapper {
@@ -3129,6 +3125,429 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* =========================================================================
+       Comprehensive Mobile Optimization & Alignment Fixes
+       ========================================================================= */
+
+    /* Apcap Quick Switcher Tabs & Navigation Bar */
+    .apcap-tabs-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .apcap-tab-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: rgba(18, 22, 34, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      font-family: inherit;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .apcap-tab-pill:hover {
+      background: rgba(30, 38, 60, 0.95);
+      border-color: rgba(225, 29, 72, 0.4);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .apcap-tab-pill.active {
+      background: linear-gradient(135deg, rgba(225, 29, 72, 0.35), rgba(184, 29, 91, 0.35));
+      border-color: var(--crimson);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(225, 29, 72, 0.45);
+    }
+
+    .apcap-tab-pill .tab-badge {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(225, 29, 72, 0.3);
+      color: #fda4af;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .apcap-nav-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      max-width: 360px;
+      margin: 14px auto 0;
+    }
+
+    /* Carousel Mobile Controls Row (Hiper Cap & Fiocruz) */
+    .carousel-controls-row {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      margin: 14px 0 18px;
+    }
+
+    .carousel-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: rgba(22, 25, 38, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+      max-width: 130px;
+      font-family: inherit;
+      touch-action: manipulation;
+    }
+
+    .carousel-nav-btn:hover,
+    .carousel-nav-btn:active {
+      background: var(--wine);
+      border-color: var(--crimson);
+    }
+
+    .carousel-nav-counter {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--wine-light);
+      padding: 6px 14px;
+      background: rgba(184, 29, 91, 0.15);
+      border: 1px solid rgba(184, 29, 91, 0.35);
+      border-radius: 20px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .fiocruz-controls .fiocruz-nav-btn:hover,
+    .fiocruz-controls .fiocruz-nav-btn:active {
+      background: rgba(16, 185, 129, 0.3) !important;
+      border-color: #10b981 !important;
+      color: #6ee7b7 !important;
+    }
+
+    /* Responsive Overrides (max-width: 768px) */
+    @media (max-width: 768px) {
+      /* 1. Sleek & Compact Sticky Header */
+      header.site-header {
+        padding: 8px 0 !important;
+        background: rgba(9, 10, 15, 0.96) !important;
+      }
+
+      .nav-inner {
+        gap: 8px !important;
+      }
+
+      .brand-avatar {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.82rem !important;
+        border-radius: 8px !important;
+      }
+
+      .brand-text h1 {
+        font-size: 0.88rem !important;
+        line-height: 1.1 !important;
+      }
+
+      .brand-text p {
+        display: none !important;
+      }
+
+      .status-pill {
+        display: none !important;
+      }
+
+      .nav-actions {
+        gap: 6px !important;
+      }
+
+      .nav-actions .btn {
+        padding: 6px 14px !important;
+        font-size: 0.78rem !important;
+        border-radius: 8px !important;
+      }
+
+      /* 2. Central Alignment on Mobile */
+      .section-heading-block {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+      }
+
+      .section-heading-block > div {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-eyebrow {
+        text-align: center !important;
+      }
+
+      .section-title-lg {
+        text-align: center !important;
+        font-size: 1.65rem !important;
+      }
+
+      .section-desc-lead {
+        text-align: center !important;
+        margin: 0 auto !important;
+        font-size: 0.88rem !important;
+      }
+
+      .project-info-body {
+        text-align: center !important;
+      }
+
+      .project-client-name,
+      .project-card-title,
+      .project-card-excerpt {
+        text-align: center !important;
+      }
+
+      .project-meta-row {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: center !important;
+      }
+
+      .tools-pill-group {
+        justify-content: center !important;
+      }
+
+      .about-card-wrap {
+        text-align: center !important;
+        justify-items: center !important;
+        padding: 24px 16px !important;
+      }
+
+      .about-portrait-box {
+        margin: 0 auto !important;
+        align-items: center !important;
+      }
+
+      .about-badge-stack {
+        justify-content: center !important;
+      }
+
+      .about-bio-content {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-bio-content .section-eyebrow,
+      .about-bio-content h3,
+      .about-bio-content h4,
+      .about-bio-text {
+        text-align: center !important;
+      }
+
+      .availability-highlight-box {
+        text-align: center !important;
+        justify-content: center !important;
+      }
+
+      .toolkit-header {
+        text-align: center !important;
+      }
+
+      .toolkit-pills {
+        justify-content: center !important;
+      }
+
+      .about-bio-content > div:last-child {
+        justify-content: center !important;
+      }
+
+      .career-timeline {
+        padding-left: 0 !important;
+        border-left: none !important;
+      }
+
+      .career-item {
+        padding-left: 0 !important;
+        text-align: center !important;
+      }
+
+      .career-item::before {
+        display: none !important;
+      }
+
+      .career-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+      }
+
+      .career-desc {
+        text-align: center !important;
+      }
+
+      /* 3. Modal Alignment and Fixes */
+      .modal-dialog-box {
+        padding: 20px 14px !important;
+        text-align: center !important;
+      }
+
+      .modal-header-meta {
+        padding-right: 0 !important;
+        text-align: center !important;
+      }
+
+      .modal-project-client,
+      .modal-project-title {
+        text-align: center !important;
+      }
+
+      .modal-project-title {
+        font-size: 1.35rem !important;
+      }
+
+      .modal-meta-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+      }
+
+      .modal-meta-col h5,
+      .modal-meta-col p {
+        text-align: center !important;
+      }
+
+      .modal-carousel-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+
+      .modal-carousel-heading,
+      .modal-carousel-subdesc {
+        text-align: center !important;
+      }
+
+      .carousel-meta-card {
+        text-align: center !important;
+        padding: 16px !important;
+      }
+
+      .carousel-meta-header {
+        justify-content: center !important;
+        text-align: center !important;
+      }
+
+      .carousel-video-title,
+      .carousel-video-desc {
+        text-align: center !important;
+      }
+
+      .carousel-meta-footer {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      .modal-select-commercial-wrap {
+        justify-content: center !important;
+        width: 100% !important;
+      }
+
+      .modal-select-commercial-wrap select {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+
+      /* 4. Carousels on Mobile (Hiper Cap, Fiocruz, Apcap) */
+      .carousel-stage-box {
+        display: block !important;
+        margin-bottom: 0 !important;
+      }
+
+      .carousel-stage-box .carousel-arrow-btn.desktop-arrow {
+        display: none !important;
+      }
+
+      .carousel-controls-row {
+        display: flex !important;
+      }
+
+      .apcap-phone-wrapper {
+        max-width: 290px !important;
+        margin: 0 auto;
+      }
+
+      .apcap-phone-device {
+        max-height: 500px !important;
+      }
+
+      .apcap-phone-island {
+        width: 70px !important;
+        height: 16px !important;
+      }
+
+      .apcap-panel-header {
+        text-align: center !important;
+      }
+
+      .apcap-panel-title,
+      .apcap-panel-sub {
+        text-align: center !important;
+      }
+
+      .fiocruz-guide-header {
+        text-align: center !important;
+      }
+
+      .fiocruz-guide-title,
+      .fiocruz-guide-sub {
+        text-align: center !important;
+      }
+
+      .fiocruz-ep-top {
+        justify-content: center !important;
+        gap: 8px;
+      }
+
+      .fiocruz-ep-card {
+        text-align: center !important;
+      }
+
+      .bts-card-item {
+        text-align: center !important;
+      }
+
+      .modal-brief-text {
+        text-align: center !important;
+      }
+    }
   </style>
 </head>
 
@@ -3462,25 +3881,38 @@
 
           <!-- Stage Viewport with Arrows -->
           <div class="carousel-stage-box">
-            <button class="carousel-arrow-btn prev" onclick="prevHiperModalSlide()" aria-label="Comercial anterior">
+            <button class="carousel-arrow-btn prev desktop-arrow" onclick="prevHiperModalSlide()" aria-label="Comercial anterior">
               <svg viewBox="0 0 24 24">
                 <path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
             </button>
 
-            <div class="carousel-viewport-wrap">
+            <div class="carousel-viewport-wrap" id="hiperSwipeArea">
               <div class="video-frame-16x9">
                 <iframe id="hipercapModalIframe" src="" title="Player de Comerciais Hiper Cap"
                   allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
 
-            <button class="carousel-arrow-btn next" onclick="nextHiperModalSlide()" aria-label="Próximo comercial">
+            <button class="carousel-arrow-btn next desktop-arrow" onclick="nextHiperModalSlide()" aria-label="Próximo comercial">
               <svg viewBox="0 0 24 24">
                 <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Controls Row -->
+          <div class="carousel-controls-row">
+            <button class="carousel-nav-btn prev" onclick="prevHiperModalSlide()" aria-label="Comercial anterior">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <span>Anterior</span>
+            </button>
+            <span class="carousel-nav-counter" id="hiperNavCounter">Comercial 1 de 29</span>
+            <button class="carousel-nav-btn next" onclick="nextHiperModalSlide()" aria-label="Próximo comercial">
+              <span>Próximo</span>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
             </button>
           </div>
 
@@ -3550,15 +3982,31 @@
               <h4 class="modal-carousel-heading">Apcap da Sorte — Dia das Mulheres &amp; Páscoa</h4>
               <p class="modal-carousel-subdesc">
                 Campanha de Dia das Mulheres baseada em depoimentos reais e comercial de Páscoa com efeitos visuais.
-                Selecione uma peça ao lado para assistir.
+                Alterne entre as 3 peças nos botões abaixo ou deslize para o lado.
               </p>
             </div>
             <div class="carousel-counter-badge" id="apcapModalCounter">Peça 1 de 3</div>
           </div>
 
+          <!-- Quick Reel Switcher Tabs (Accessible immediately without scrolling!) -->
+          <div class="apcap-tabs-bar" id="apcapTabsBar">
+            <button class="apcap-tab-pill active" onclick="selectApcapPiece(0)" id="apcapTab0">
+              <span class="tab-badge">★ +1M</span>
+              <span class="tab-title">1. Mulheres (+1M)</span>
+            </button>
+            <button class="apcap-tab-pill" onclick="selectApcapPiece(1)" id="apcapTab1">
+              <span class="tab-badge">História</span>
+              <span class="tab-title">2. Superação</span>
+            </button>
+            <button class="apcap-tab-pill" onclick="selectApcapPiece(2)" id="apcapTab2">
+              <span class="tab-badge">VFX</span>
+              <span class="tab-title">3. Páscoa VFX</span>
+            </button>
+          </div>
+
           <div class="apcap-showcase-layout">
             <!-- Left Column: Sleek Smartphone Reel Mockup -->
-            <div class="apcap-phone-wrapper">
+            <div class="apcap-phone-wrapper" id="apcapSwipeArea">
               <div class="apcap-phone-device">
                 <div class="apcap-phone-island">
                   <div class="apcap-phone-cam"></div>
@@ -3569,6 +4017,20 @@
                     allowfullscreen scrolling="no"></iframe>
                 </div>
               </div>
+
+              <!-- Controls directly under phone -->
+              <div class="apcap-nav-controls">
+                <button class="carousel-nav-btn prev" onclick="prevApcapPiece()" aria-label="Reel anterior">
+                  <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span>Anterior</span>
+                </button>
+                <span class="carousel-nav-counter" id="apcapNavCounter">Peça 1 de 3</span>
+                <button class="carousel-nav-btn next" onclick="nextApcapPiece()" aria-label="Próximo Reel">
+                  <span>Próximo</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+              </div>
+
               <div class="apcap-phone-bottom-bar">
                 <a id="apcapModalExternalLink" href="https://www.instagram.com/reel/DVhWRrYiC6O/" target="_blank"
                   rel="noopener" class="apcap-external-btn">
@@ -3586,9 +4048,8 @@
               <div class="apcap-panel-header">
                 <span class="role-badge" style="background: rgba(225, 29, 72, 0.2); color: #fda4af;">Campanhas &amp;
                   Desdobramentos</span>
-                <h5 class="apcap-panel-title">Selecione o Reel para Reproduzir:</h5>
-                <p class="apcap-panel-sub">Clique em qualquer card para carregar o vídeo correspondente diretamente no
-                  smartphone ao lado.</p>
+                <h5 class="apcap-panel-title">Detalhes de Cada Peça:</h5>
+                <p class="apcap-panel-sub">Você também pode tocar em qualquer card abaixo para carregar o vídeo correspondente no smartphone.</p>
               </div>
               <div class="apcap-reels-list" id="apcapReelsList">
                 <!-- Injected by JS -->
@@ -3616,7 +4077,7 @@
 
           <!-- Stage Viewport with Arrows -->
           <div class="carousel-stage-box">
-            <button class="carousel-arrow-btn prev fiocruz-arrow-theme" onclick="prevFiocruzModalSlide()"
+            <button class="carousel-arrow-btn prev fiocruz-arrow-theme desktop-arrow" onclick="prevFiocruzModalSlide()"
               aria-label="Episódio anterior">
               <svg viewBox="0 0 24 24">
                 <path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -3624,19 +4085,32 @@
               </svg>
             </button>
 
-            <div class="carousel-viewport-wrap">
+            <div class="carousel-viewport-wrap" id="fiocruzSwipeArea">
               <div class="video-frame-16x9 fiocruz-frame-theme">
                 <iframe id="fiocruzModalIframe" src="" title="Player da Série Biodiversidade Fiocruz"
                   allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
 
-            <button class="carousel-arrow-btn next fiocruz-arrow-theme" onclick="nextFiocruzModalSlide()"
+            <button class="carousel-arrow-btn next fiocruz-arrow-theme desktop-arrow" onclick="nextFiocruzModalSlide()"
               aria-label="Próximo episódio">
               <svg viewBox="0 0 24 24">
                 <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Controls Row -->
+          <div class="carousel-controls-row fiocruz-controls">
+            <button class="carousel-nav-btn prev fiocruz-nav-btn" onclick="prevFiocruzModalSlide()" aria-label="Episódio anterior">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <span>Anterior</span>
+            </button>
+            <span class="carousel-nav-counter fiocruz-counter-theme" id="fiocruzNavCounter">Episódio 1 de 7</span>
+            <button class="carousel-nav-btn next fiocruz-nav-btn" onclick="nextFiocruzModalSlide()" aria-label="Próximo episódio">
+              <span>Próximo</span>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
             </button>
           </div>
 
@@ -4519,6 +4993,8 @@
 
         const counter = document.getElementById('hiperModalCounter');
         if (counter) counter.innerText = 'Comercial ' + (hiperModalSlideIndex + 1) + ' de ' + HIPERCAP_MODAL_SLIDES.length;
+        const navCounter = document.getElementById('hiperNavCounter');
+        if (navCounter) navCounter.innerText = 'Comercial ' + (hiperModalSlideIndex + 1) + ' de ' + HIPERCAP_MODAL_SLIDES.length;
 
         const iframe = document.getElementById('hipercapModalIframe');
         if (iframe) {
@@ -4615,6 +5091,14 @@
         const counter = document.getElementById('apcapModalCounter');
         if (counter) counter.innerText = 'Peça ' + (idx + 1) + ' de ' + APCAP_PIECES_DATA.length;
 
+        const aNavCounter = document.getElementById('apcapNavCounter');
+        if (aNavCounter) aNavCounter.innerText = 'Peça ' + (idx + 1) + ' de ' + APCAP_PIECES_DATA.length;
+
+        document.querySelectorAll('.apcap-tab-pill').forEach((btn, i) => {
+          if (i === idx) btn.classList.add('active');
+          else btn.classList.remove('active');
+        });
+
         const ifr = document.getElementById('apcapModalIframe');
         if (ifr) {
           ifr.src = 'https://www.instagram.com/reel/' + item.code + '/embed/';
@@ -4636,6 +5120,23 @@
             if (ind) ind.innerText = 'Assistir';
           }
         });
+
+        if (window.innerWidth <= 768) {
+          const p = document.getElementById('apcapSwipeArea');
+          if (p && p.getBoundingClientRect().top < 0) {
+            p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+
+      function nextApcapPiece() {
+        const next = (apcapActiveIndex + 1) % APCAP_PIECES_DATA.length;
+        selectApcapPiece(next);
+      }
+
+      function prevApcapPiece() {
+        const prev = (apcapActiveIndex - 1 + APCAP_PIECES_DATA.length) % APCAP_PIECES_DATA.length;
+        selectApcapPiece(prev);
       }
 
       // --- Fiocruz Dedicated Biodiversity Science Carousel in Case Study Modal ---
@@ -4679,6 +5180,8 @@
 
         const counter = document.getElementById('fiocruzModalCounter');
         if (counter) counter.innerText = 'Episódio ' + (fiocruzModalSlideIndex + 1) + ' de ' + FIOCRUZ_MODAL_SLIDES.length;
+        const fNavCounter = document.getElementById('fiocruzNavCounter');
+        if (fNavCounter) fNavCounter.innerText = 'Episódio ' + (fiocruzModalSlideIndex + 1) + ' de ' + FIOCRUZ_MODAL_SLIDES.length;
 
         const iframe = document.getElementById('fiocruzModalIframe');
         if (iframe) {
@@ -4736,8 +5239,45 @@
         renderFiocruzModalSlide();
       }
 
+      // Touch swipe gestures for mobile carousels
+      function initSwipeListeners() {
+        function setupSwipe(elementId, onLeft, onRight) {
+          const el = document.getElementById(elementId);
+          if (!el) return;
+          let startX = 0;
+          let startY = 0;
+          el.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+              startX = e.touches[0].clientX;
+              startY = e.touches[0].clientY;
+            }
+          }, { passive: true });
+          el.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length === 1) {
+              const diffX = e.changedTouches[0].clientX - startX;
+              const diffY = e.changedTouches[0].clientY - startY;
+              if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+                if (diffX < 0) {
+                  onLeft();
+                } else {
+                  onRight();
+                }
+              }
+            }
+          }, { passive: true });
+        }
+
+        setupSwipe('hiperSwipeArea', nextHiperModalSlide, prevHiperModalSlide);
+        setupSwipe('hipercapDedicatedCarousel', nextHiperModalSlide, prevHiperModalSlide);
+        setupSwipe('fiocruzSwipeArea', nextFiocruzModalSlide, prevFiocruzModalSlide);
+        setupSwipe('fiocruzDedicatedCarousel', nextFiocruzModalSlide, prevFiocruzModalSlide);
+        setupSwipe('apcapSwipeArea', nextApcapPiece, prevApcapPiece);
+        setupSwipe('apcapDedicatedShowcase', nextApcapPiece, prevApcapPiece);
+      }
+
       document.addEventListener('DOMContentLoaded', function () {
         syncTeaserVideos();
+        initSwipeListeners();
         const sL = document.getElementById('selectLeftFinish');
         const sR = document.getElementById('selectRightFinish');
         if (sL) sL.selectedIndex = 0;
