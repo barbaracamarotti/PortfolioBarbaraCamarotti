@@ -132,5 +132,7 @@ html.is-intro { overflow: hidden; }
 
 @media (max-width: 720px) {
   .intro__hud--r { display: none; }
-  .intro__stage { width: min(78vw, 44vh); }
+  /* menor no celular: no pico da batida a claquete estica ~24% e a tampa abre para o lado */
+  .intro__stage { width: min(60vw, 40vh); margin-top: -10vh; }
+  .intro__cue { font-size: clamp(2.2rem, 11vw, 3.2rem); }
 }
