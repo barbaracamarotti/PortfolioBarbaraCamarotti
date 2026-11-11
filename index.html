@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barbara Camarotti — Motion Designer &amp; Editora de Vídeo</title>
   <meta name="description" content="Portfólio de Barbara Camarotti, Motion Designer, Editora de Vídeo e Gestora Audiovisual em São Paulo. Comerciais de TV, simulações 3D para e-commerce, divulgação científica e documentários.">
-  <meta name="theme-color" content="#0b090a">
+  <meta name="theme-color" content="#1a1612">
   <link rel="canonical" href="https://barbaracamarotti.github.io/PortfolioBarbaraCamarotti/">
 
   <meta property="og:type" content="website">
@@ -19,11 +19,11 @@
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23b81d5b'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='central' font-family='system-ui,sans-serif' font-weight='800' font-size='46' fill='%23f4ede6'%3EBC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='10' fill='%23ffad14'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='central' font-family='Impact,system-ui,sans-serif' font-weight='800' font-size='50' fill='%231a1612'%3EBC%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Instrument+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -39,9 +39,84 @@
   }
   </script>
   <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/intro.css">
+  <script>
+    try {
+      var force = /[?&]intro\b/.test(location.search);
+      var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (force || (!calm && !sessionStorage.getItem('introSeen'))) document.documentElement.classList.add('is-intro', 'has-intro');
+    } catch (e) {}
+  </script>
 </head>
 
 <body>
+  <div class="intro" id="intro">
+    <div class="intro__cam" aria-hidden="true">
+      <div class="intro__frame"></div>
+      <p class="intro__hud mono"><i></i>REC <span data-tc>00:00:00:00</span></p>
+      <p class="intro__hud intro__hud--r mono">Barbara Camarotti · Showreel</p>
+      <div class="intro__rays"></div>
+      <div class="intro__stage">
+        <div class="intro__beam"></div>
+        <div class="intro__ring"></div>
+        <div class="intro__clap">
+          <div class="intro__holo">
+            <svg class="intro__svg" viewBox="0 0 320 310">
+              <defs>
+                <clipPath id="introStick"><rect x="15" y="36" width="290" height="32" rx="4"/></clipPath>
+                <clipPath id="introBand"><rect x="15" y="72" width="290" height="30"/></clipPath>
+              </defs>
+              <g class="intro__base">
+                <rect class="h-fill" x="15" y="72" width="290" height="230" rx="8"/>
+                <g clip-path="url(#introBand)" class="h-stripe">
+                  <polygon points="25,72 57,72 37,102 5,102"/>
+                  <polygon points="89,72 121,72 101,102 69,102"/>
+                  <polygon points="153,72 185,72 165,102 133,102"/>
+                  <polygon points="217,72 249,72 229,102 197,102"/>
+                  <polygon points="281,72 313,72 293,102 261,102"/>
+                </g>
+                <g class="h-line">
+                  <line x1="15" y1="102" x2="305" y2="102"/>
+                  <line x1="31" y1="150" x2="289" y2="150"/>
+                  <line x1="31" y1="200" x2="289" y2="200"/>
+                  <line x1="31" y1="250" x2="289" y2="250"/>
+                  <line x1="160" y1="160" x2="160" y2="250"/>
+                </g>
+                <g class="h-text">
+                  <text x="34" y="124">PRODUÇÃO</text>
+                  <text x="34" y="142" class="h-text--big">BARBARA CAMAROTTI</text>
+                  <text x="34" y="178">CENA</text>
+                  <text x="34" y="194" class="h-text--big">01</text>
+                  <text x="174" y="178">TAKE</text>
+                  <text x="174" y="194" class="h-text--big">01</text>
+                  <text x="34" y="228">ROLO</text>
+                  <text x="34" y="244" class="h-text--big">A</text>
+                  <text x="174" y="228">DATA</text>
+                  <text x="174" y="244" class="h-text--big">2026</text>
+                  <text x="34" y="280">DIREÇÃO · MOTION · EDIÇÃO</text>
+                </g>
+              </g>
+              <g class="intro__stick">
+                <rect class="h-fill" x="15" y="36" width="290" height="32" rx="4"/>
+                <g clip-path="url(#introStick)" class="h-stripe">
+                  <polygon points="5,36 37,36 57,68 25,68"/>
+                  <polygon points="69,36 101,36 121,68 89,68"/>
+                  <polygon points="133,36 165,36 185,68 153,68"/>
+                  <polygon points="197,36 229,36 249,68 217,68"/>
+                  <polygon points="261,36 293,36 313,68 281,68"/>
+                </g>
+                <circle class="h-fill" cx="27" cy="62" r="5"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <p class="intro__cue">AÇÃO!</p>
+      </div>
+      <div class="intro__flash"></div>
+    </div>
+    <button class="intro__skip mono" type="button">Pular intro</button>
+  </div>
+
   <a class="skip" href="#projetos">Pular para os projetos</a>
 
   <header class="top" id="top">
@@ -87,6 +162,7 @@
       <div class="wrap hero__grid">
         <h1 class="hero__name"><span><b>Barbara</b></span><span><b>Camarotti</b></span></h1>
         <div class="hero__side">
+          <p class="mono hero__rec" aria-hidden="true"><i></i>REC <span>00:00:24:12</span></p>
           <p class="mono hero__role">Motion Designer<br>Editora de Vídeo<br>Gestora Audiovisual</p>
           <p class="hero__lead">Histórias visuais dinâmicas, identidades de marca e motion graphics de alto impacto — da TV aberta ao e-commerce 3D.</p>
           <a class="btn btn--line btn--sm" href="midia/Barbara-Camarotti-Curriculo.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
@@ -360,6 +436,7 @@
     </div>
   </dialog>
 
+  <script src="js/intro.js"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
